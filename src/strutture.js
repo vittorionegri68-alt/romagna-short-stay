@@ -85,7 +85,6 @@ export const strutture = [
       { luogo: "Cesena", tempo: "15 min" },
       { luogo: "San Marino", tempo: "35 min" },
       { luogo: "Rimini", tempo: "40 min" },
-      { luogo: "Bologna", tempo: "60 min" },
     ],
     rating: 5.0,
     recensioni: 26,
