@@ -81,7 +81,6 @@ export const strutture = [
     descrizione: "In the heart of Cesenatico, steps from the sea. La Perla del Mare features a lift and a private garage, perfect for families, groups of friends and remote workers thanks to fast WiFi.",
     tag: ["Fibre WiFi", "Full kitchen", "A/C", "Lift", "Bicycles", "Private garage", "Self check-in"],
     distanze: [
-      { luogo: "Parco di Levante", tempo: "4 min" },
       { luogo: "Beach", tempo: "400 m" },
       { luogo: "Cesena", tempo: "15 min" },
       { luogo: "San Marino", tempo: "35 min" },
