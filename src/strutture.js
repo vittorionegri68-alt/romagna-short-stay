@@ -34,9 +34,9 @@
   //   attivo: true,
   // },
 
-import casaCavourCover from './assets/Strutture/casa-cavour/cover.jpg'
-import perlacover from './assets/Strutture/perla/cover.jpg'
-import scalinocover from './assets/Strutture/Teatro/cover.jpg'
+import casaCavourCover from './assets/strutture/casa-cavour/cover.jpg'
+import perlacover from './assets/strutture/perla/cover.jpg'
+import scalinocover from './assets/strutture/Teatro/cover.jpg'
 
 export const strutture = [
   {
