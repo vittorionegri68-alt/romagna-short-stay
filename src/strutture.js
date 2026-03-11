@@ -34,7 +34,7 @@
   //   attivo: true,
   // },
 
-import casaCavourCover from './assets/strutture/casa-cavour/cover.jpg'
+import casaCavourCover from './assets/strutture/casa-cavour/Cover.jpg'
 import perlacover from './assets/strutture/perla/cover.jpg'
 import scalinocover from './assets/strutture/Teatro/cover.jpg'
 
