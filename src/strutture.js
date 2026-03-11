@@ -89,8 +89,8 @@ export const strutture = [
     rating: 5.0,
     recensioni: 26,
     prezzo_da: 120,
-    url: "https://www.airbnb.it/rooms/1310946139319199865?adults=4&search_mode=regular_search&check_in=2025-03-20&check_out=2025-03-25&children=0&infants=0&pets=0&source_impression_id=p3_1742416555_P3xjNrF5P55kSM1D&previous_page_section_name=1000&federated_search_id=54d46396-a5b9-4f12-919f-4386ba2ec412",
-    airbnb: "https://www.airbnb.it/rooms/1310946139319199865?adults=4&search_mode=regular_search&check_in=2025-03-20&check_out=2025-03-25&children=0&infants=0&pets=0&source_impression_id=p3_1742416555_P3xjNrF5P55kSM1D&previous_page_section_name=1000&federated_search_id=54d46396-a5b9-4f12-919f-4386ba2ec412",
+    url: "https://www.airbnb.it/rooms/1310946139319199865",
+    airbnb: "https://www.airbnb.it/rooms/1310946139319199865",
     attivo: true,
   },
 
