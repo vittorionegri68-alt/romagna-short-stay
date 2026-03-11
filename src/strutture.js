@@ -50,7 +50,7 @@ export const strutture = [
     camere: 2,
     bagni: 1,
     animali: true,
-    descrizione: "Design apartment in the historic centre of Bertinoro — the \"Balcony of Romagna\". Curated furnishings, full kitchen, fibre WiFi. Perfect for couples, families and remote workers.",
+    descrizione: "Design apartment in the historic centre of Bertinoro, the \"Balcony of Romagna\". Curated furnishings, full kitchen, fibre WiFi. Perfect for couples, families and remote workers.",
     tag: ["Fibre WiFi", "Full kitchen", "A/C", "Public parking", "Self check-in"],
     distanze: [
       { luogo: "Cesena", tempo: "15 min" },
@@ -78,7 +78,7 @@ export const strutture = [
     camere: 2,
     bagni: 1,
     animali: true,
-    descrizione: "In the heart of Cesenatico, steps from the sea. La Perla del Mare features a lift, balconies and a private garage — perfect for families, groups of friends and remote workers thanks to fast WiFi.",
+    descrizione: "In the heart of Cesenatico, steps from the sea. La Perla del Mare features a lift and a private garage, perfect for families, groups of friends and remote workers thanks to fast WiFi.",
     tag: ["Fibre WiFi", "Full kitchen", "A/C", "Lift", "Bicycles", "Private garage", "Self check-in"],
     distanze: [
       { luogo: "Parco di Levante", tempo: "4 min" },
