@@ -35,7 +35,7 @@
   // },
 
 import casaCavourCover from './assest/strutture/casa-cavour/Cover.jpg'   
-import perlacover from './assets/strutture/perla/cover.jpg'
+import perlacover from './assest/strutture/perla/cover.jpg'
 import scalinocover from './assets/strutture/Teatro/cover.jpg'
 
 export const strutture = [
