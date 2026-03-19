@@ -89,7 +89,7 @@ export const strutture = [
     rating: 5.0,
     recensioni: 26,
     prezzo_da: 120,
-    url: "https://www.airbnb.it/rooms/1310946139319199865",
+    url: "https://la-perla-cesenatico.vercel.app/",
     airbnb: "https://www.airbnb.it/rooms/1310946139319199865",
     attivo: true,
   },
