@@ -140,8 +140,8 @@ export const strutture = [
     rating: 5.0,
     recensioni: 12,
     prezzo_da: 125,
-    url: "https://www.airbnb.it/rooms/1388960535225462602?source_impression_id=p3_1773137227_P3LTxQgztVFjnYT2",
-    airbnb: "https://www.airbnb.it/rooms/1388960535225462602?source_impression_id=p3_1773137227_P3LTxQgztVFjnYT2",
+    url: "https://scalino66.vercel.app/",
+    airbnb: "https://www.airbnb.it/rooms/1388960535225462602",
     attivo: true,
   },
 ];
