@@ -37,6 +37,7 @@
 import casaCavourCover from './assest/strutture/casa-cavour/Cover.jpg'   
 import perlacover from './assest/strutture/perla/cover.jpg'
 import scalinocover from './assest/strutture/Teatro/cover.jpg'
+import garibaldinacover from './assest/strutture/garibaldina/cover.jpg'
 
 export const strutture = [
   {
@@ -144,4 +145,33 @@ export const strutture = [
     airbnb: "https://www.airbnb.it/rooms/1388960535225462602",
     attivo: true,
   },
+  {
+  id: 'garibaldina-75',
+  nome: 'Garibaldina 75',
+  cover: garibaldinacover,
+  localita: 'Cesena, FC',
+  regione: 'Emilia-Romagna',
+  tipologia: 'Apartment',
+  ospiti: 4,
+  camere: 1,
+  bagni: 1,
+  animali: true, // check on Airbnb
+  descrizione: 'Bright and welcoming apartment in the heart of Cesena. Shops, restaurants and historic landmarks within easy reach. Fast WiFi, fully equipped kitchen, self check-in with smart lock.',
+  tag: ['Historic centre', 'WiFi', 'Fully equipped kitchen', 'Self check-in', 'Air conditioning'],
+  distanze: [
+    { luogo: 'Malatestiana Fortress', tempo: '8 min walk' },
+    { luogo: 'Cesena Train Station', tempo: '10 min walk' },
+    { luogo: 'Cesenatico (beach)', tempo: '30 min by car' },
+    { luogo: 'San Marino', tempo: '35 min by car' },
+    { luogo: 'Rimini', tempo: '40 min by car' },
+    { luogo: 'Bologna Airport', tempo: '60 min by car' },
+  ],
+  rating: 5,
+  recensioni: 2,
+  prezzo_da: 105,
+  url: "https://garibaldina-75-en.vercel.app",
+  airbnb: "https://www.airbnb.it/rooms/1558562623962692060",
+  attivo: true,
+},
+
 ];
