@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { strutture } from "./strutture.js";
+import { posts } from "./posts.js";
 
 // ── Color tokens ──────────────────────────────────────────────────────────────
 const C = {
@@ -80,23 +81,22 @@ function Nav() {
           <span className="nav-cta-long">List your property here</span>
           <span className="nav-cta-short">✉️</span>
         </a>
-
-{/* Language switcher — desktop */}
-<div style={{ display: "flex", gap: "0.25rem", borderLeft: `1px solid ${C.border}`, paddingLeft: "1rem" }}>
-  <a href="https://romagna-affitti-brevi.vercel.app/"
-    style={{ color: C.textSoft, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s", padding: "0.2rem 0.3rem" }}
-    onMouseEnter={e => e.currentTarget.style.color = C.gold}
-    onMouseLeave={e => e.currentTarget.style.color = C.textSoft}>
-    IT
-  </a>
-  <span style={{ color: C.border, fontSize: "0.7rem", alignSelf: "center" }}>|</span>
-  <a href="https://romagna-short-stay.vercel.app/"
-    style={{ color: C.gold, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s", padding: "0.2rem 0.3rem" }}
-    onMouseEnter={e => e.currentTarget.style.color = C.gold}
-    onMouseLeave={e => e.currentTarget.style.color = C.textSoft}>
-    EN
-  </a>
-</div>    
+        {/* Language switcher */}
+        <div style={{ display: "flex", gap: "0.25rem", borderLeft: `1px solid ${C.border}`, paddingLeft: "1rem" }}>
+          <a href="https://romagna-affitti-brevi.vercel.app/"
+            style={{ color: C.textSoft, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s", padding: "0.2rem 0.3rem" }}
+            onMouseEnter={e => e.currentTarget.style.color = C.gold}
+            onMouseLeave={e => e.currentTarget.style.color = C.textSoft}>
+            IT
+          </a>
+          <span style={{ color: C.border, fontSize: "0.7rem", alignSelf: "center" }}>|</span>
+          <a href="https://romagna-short-stay.vercel.app/"
+            style={{ color: C.gold, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s", padding: "0.2rem 0.3rem" }}
+            onMouseEnter={e => e.currentTarget.style.color = C.gold}
+            onMouseLeave={e => e.currentTarget.style.color = C.textSoft}>
+            EN
+          </a>
+        </div>
       </div>
       <style>{`
         @media(min-width:768px){.nav-tagline{display:block!important}}
@@ -178,16 +178,13 @@ function StrutturaCard({ s, delay }) {
               transition: "transform 0.55s ease",
             }}
           />
-          {/* Type badge */}
           <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", background: "rgba(250,248,244,0.93)", padding: "0.25rem 0.65rem", fontSize: "0.62rem", color: C.gold, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", backdropFilter: "blur(6px)" }}>
             {s.tipologia}
           </div>
-          {/* Rating */}
           <div style={{ position: "absolute", top: "0.75rem", right: "0.75rem", background: "rgba(250,248,244,0.93)", padding: "0.25rem 0.65rem", fontSize: "0.68rem", color: C.text, fontWeight: 700, fontFamily: "'DM Sans',sans-serif", backdropFilter: "blur(6px)", display: "flex", alignItems: "center", gap: "0.3rem" }}>
             <span style={{ color: C.gold }}>★</span> {s.rating.toFixed(1)}
             <span style={{ color: C.textSoft, fontWeight: 400 }}>({s.recensioni})</span>
           </div>
-          {/* Price */}
           {s.prezzo_da && (
             <div style={{ position: "absolute", bottom: "0.75rem", right: "0.75rem", background: C.gold, color: "#fff", padding: "0.25rem 0.65rem", fontSize: "0.68rem", fontWeight: 700, fontFamily: "'DM Sans',sans-serif" }}>
               from €{s.prezzo_da} / night
@@ -197,20 +194,16 @@ function StrutturaCard({ s, delay }) {
 
         {/* Content */}
         <div style={{ padding: "1.4rem 1.5rem", flex: 1, display: "flex", flexDirection: "column" }}>
-          {/* Location */}
           <div style={{ fontSize: "0.63rem", letterSpacing: "0.2em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.4rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
             <span>📍</span> {s.localita}
           </div>
-          {/* Name */}
           <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.35rem", color: C.text, fontWeight: 700, marginBottom: "0.7rem", lineHeight: 1.15, letterSpacing: "-0.01em" }}>
             {s.nome}
           </h2>
-          {/* Description */}
           <p style={{ fontSize: "0.82rem", color: C.textMid, lineHeight: 1.75, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.1rem", flex: 1 }}>
             {s.descrizione}
           </p>
 
-          {/* Key info row */}
           <div style={{ display: "flex", gap: "1.25rem", marginBottom: "1.1rem", paddingBottom: "1.1rem", borderBottom: `1px solid ${C.border}`, flexWrap: "wrap" }}>
             {[
               ["👥", `${s.ospiti} guests`],
@@ -224,7 +217,6 @@ function StrutturaCard({ s, delay }) {
             ))}
           </div>
 
-          {/* Distances */}
           <div style={{ marginBottom: "1.25rem" }}>
             <div style={{ fontSize: "0.6rem", letterSpacing: "0.18em", color: C.textSoft, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.5rem" }}>Key distances</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
@@ -236,7 +228,6 @@ function StrutturaCard({ s, delay }) {
             </div>
           </div>
 
-          {/* Tags */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem", marginBottom: "1.4rem" }}>
             {s.tag.map(t => (
               <span key={t} style={{ fontSize: "0.63rem", color: C.textSoft, border: `1px solid ${C.border}`, padding: "0.18rem 0.5rem", fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.06em" }}>
@@ -245,7 +236,6 @@ function StrutturaCard({ s, delay }) {
             ))}
           </div>
 
-          {/* CTA */}
           <a href={s.url} target="_blank" rel="noopener noreferrer"
             style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.8rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", transition: "background 0.2s", textAlign: "center" }}
             onMouseEnter={e => e.currentTarget.style.background = "#8a6520"}
@@ -292,6 +282,126 @@ function EmptyState() {
       <div style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.4rem", color: C.textMid, marginBottom: "0.5rem" }}>No properties found</div>
       <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.82rem" }}>Try changing the selected filter</div>
     </div>
+  );
+}
+
+// ── Blog ──────────────────────────────────────────────────────────────────────
+function Blog() {
+  const [aperto, setAperto] = useState(null);
+  const visibili = posts.filter(p => p.attivo).sort((a, b) => new Date(b.data) - new Date(a.data));
+
+  const sectionRef = useRef(null);
+  const handleApri = (id) => {
+    setAperto(id);
+    setTimeout(() => {
+      if (sectionRef.current) {
+        sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 50);
+  };
+  const handleChiudi = () => {
+    setAperto(null);
+    setTimeout(() => {
+      if (sectionRef.current) {
+        sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 50);
+  };
+
+  if (visibili.length === 0) return null;
+
+  return (
+    <section id="blog" ref={sectionRef} style={{ background: C.bg2, padding: "7rem 2rem" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <Reveal>
+          <div style={{ marginBottom: "3.5rem" }}>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
+              <span style={{ width: 26, height: 1, background: C.gold, display: "inline-block" }} /> Stories & Tips
+            </div>
+            <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
+              Discover Romagna<br /><span style={{ color: C.gold, fontStyle: "italic" }}>through our eyes.</span>
+            </h2>
+          </div>
+        </Reveal>
+
+        {/* Post grid */}
+        {aperto === null && (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "1.5rem", alignItems: "stretch" }} className="blog-grid">
+            {visibili.map((post, i) => (
+              <Reveal key={post.id} delay={i * 80}>
+                <div
+                  onClick={() => handleApri(post.id)}
+                  style={{ background: C.cardBg, padding: "2rem", cursor: "pointer", height: "100%", boxSizing: "border-box", transition: "all 0.3s ease", boxShadow: C.shadow, display: "flex", flexDirection: "column" }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 40px rgba(26,22,18,0.14)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = C.shadow; }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
+                    <span style={{ fontSize: "0.62rem", letterSpacing: "0.18em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", border: `1px solid ${C.border}`, padding: "0.2rem 0.6rem" }}>{post.categoria}</span>
+                    <span style={{ fontSize: "0.68rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif" }}>{new Date(post.data).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+                  </div>
+                  <h3 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.25rem", color: C.text, fontWeight: 700, lineHeight: 1.2, marginBottom: "0.85rem", letterSpacing: "-0.01em" }}>{post.titolo}</h3>
+                  <p style={{ fontSize: "0.83rem", color: C.textMid, lineHeight: 1.75, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.25rem", flex: 1 }}>{post.sommario}</p>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", color: C.gold, fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }}>
+                    Read more <span>↗</span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        )}
+
+        {/* Open post */}
+        {aperto !== null && (() => {
+          const post = visibili.find(p => p.id === aperto);
+          if (!post) return null;
+          return (
+            <Reveal>
+              <div style={{ maxWidth: 760, margin: "0 auto" }}>
+                <button
+                  onClick={handleChiudi}
+                  style={{ background: "none", border: `1px solid ${C.border}`, padding: "0.45rem 1rem", fontSize: "0.72rem", color: C.textMid, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", marginBottom: "2.5rem", transition: "all 0.2s" }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
+                  ← All articles
+                </button>
+                <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1.25rem" }}>
+                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.18em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", border: `1px solid ${C.border}`, padding: "0.2rem 0.6rem" }}>{post.categoria}</span>
+                  <span style={{ fontSize: "0.68rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif" }}>{new Date(post.data).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+                </div>
+                <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.8rem,4vw,2.8rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, marginBottom: "1rem", letterSpacing: "-0.02em" }}>{post.titolo}</h2>
+                <p style={{ fontSize: "1rem", color: C.gold, lineHeight: 1.75, fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontStyle: "italic", marginBottom: "2rem", paddingBottom: "2rem", borderBottom: `1px solid ${C.border}` }}>{post.sommario}</p>
+
+                {post.contenuto.map((blocco, i) => {
+                  if (blocco.tipo === "paragrafo") return (
+                    <p key={i} style={{ fontSize: "0.95rem", color: C.textMid, lineHeight: 1.9, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.25rem" }}>{blocco.testo}</p>
+                  );
+                  if (blocco.tipo === "titoletto") return (
+                    <h3 key={i} style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.35rem", color: C.text, fontWeight: 700, marginBottom: "0.6rem", marginTop: "2rem", letterSpacing: "-0.01em" }}>{blocco.testo}</h3>
+                  );
+                  if (blocco.tipo === "download") return (
+                    <div key={i} style={{ display: "flex", gap: "1rem", flexWrap: "wrap", margin: "1.5rem 0" }}>
+                      <a href={blocco.src1} download
+                        style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", transition: "background 0.2s" }}
+                        onMouseEnter={e => e.currentTarget.style.background = "#8a6520"}
+                        onMouseLeave={e => e.currentTarget.style.background = C.gold}>
+                        ↓ {blocco.label1}
+                      </a>
+                      <a href={blocco.src2} download
+                        style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: C.gold, padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", border: `1.5px solid ${C.gold}`, transition: "all 0.2s" }}
+                        onMouseEnter={e => { e.currentTarget.style.background = C.gold; e.currentTarget.style.color = "#fff"; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = C.gold; }}>
+                        ↓ {blocco.label2}
+                      </a>
+                    </div>
+                  );
+                  return null;
+                })}
+              </div>
+            </Reveal>
+          );
+        })()}
+      </div>
+      <style>{`@media(max-width:600px){.blog-grid{grid-template-columns:1fr!important;}}`}</style>
+    </section>
   );
 }
 
@@ -363,7 +473,7 @@ export default function App() {
       <Hero count={strutture.filter(s => s.attivo).length} />
 
       {/* Grid section */}
-      <section style={{ background: C.bg, padding: "5rem 2rem 7rem" }}>
+      <section id="strutture" style={{ background: C.bg, padding: "5rem 2rem 7rem" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <FilterBar filter={filter} setFilter={setFilter} />
           {visibili.length === 0
@@ -383,6 +493,9 @@ export default function App() {
           }
         </div>
       </section>
+
+      {/* Blog */}
+      <Blog />
 
       <CtaBanner />
       <Footer />
