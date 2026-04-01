@@ -11,6 +11,73 @@ export const posts = [
  // ── NEW POST — Giro d'Italia Cervia 2026 ──────────────────────────────────
   // Add this block to the posts[] array in src/posts.js
   // Also upload src/assets/Cervia_1.png and src/assets/Cervia_2.png to GitHub
+{
+  id: "April in Romagna",
+  titolo: "April is the perfect month to discover cultural Romagna away from the summer crowds.",
+  data: "2026-04-01",
+  categoria: "Events",
+  sommario: "Have you ever thought that medieval villages were open-air museums only worth visiting in summer?",
+  contenuto: [
+    {
+      tipo: "paragrafo",
+      testo: "Think again. April is the perfect month to discover cultural Romagna, far from the summer crowds."
+    },
+    {
+      tipo: "titoletto",
+      testo: "The Romagna Hills"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "The Romagna hills are coming back to life. The alleyways of Bertinoro, Longiano and Verucchio fill with spring light. Mild temperatures, no queues, and for once you can actually talk to the people who live there."
+    },
+    {
+      tipo: "titoletto",
+      testo: "Casa Cavour: the perfect base for April weekends"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "April 2026 brings a Romagna investing heavily in culture. The Region has allocated 34 million euros to promote not just the Riviera, but also the inland areas."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "The result? More events in the villages, better accessibility, and greater attention to smaller towns."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "In Bertinoro, Castello Malaspina reopens with guided tours every weekend (€5, booking recommended). From there, the view stretches along the coast all the way to Rimini."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Longiano is home to the Italian Cast Iron Museum and the Fondazione Tito Balestra — contemporary art in a village that smells of stone and wisteria."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Verucchio, birthplace of the Malatesta family, holds one of the most remarkable archaeological museums in the region. From Casa Cavour, Longiano is just 15 minutes away, Verucchio 20."
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Easter in Romagna this year is not just about the sea. It is history, it is art, it is discovering that behind every door there is a story no tourist brochure ever tells."
+    },
+    {
+      tipo: "titoletto",
+      testo: "Follow us on social media"
+    },
+    {
+      tipo: "paragrafo",
+      testo: "Every week we share cultural, culinary and travel content about Romagna on our social channels."
+    },
+    {
+      tipo: "link",
+      testo: "https://www.instagram.com/bnb_bertinoro/"
+    },
+    {
+      tipo: "link",
+      testo: "https://www.facebook.com/profile.php?id=61577458010505"
+    }
+  ],
+  attivo: true,
+}
+
   {
     id: "giro-italia-cervia-2026",
     titolo: "The Giro d'Italia comes to Cervia: experience the stage from Casa Cavour",
