@@ -76,7 +76,7 @@ export const posts = [
     }
   ],
   attivo: true,
-}
+},
 
   {
     id: "giro-italia-cervia-2026",
