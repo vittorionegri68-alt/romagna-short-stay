@@ -1,6 +1,6 @@
-# robots.txt — Casa Cavour
+# robots.txt — Romagna Short Stay (EN)
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.casa-cavour.com/sitemap.xml
+Sitemap: https://www.romagna-short-stay.com/sitemap.xml
