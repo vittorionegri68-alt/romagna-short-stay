@@ -1,14 +1,305 @@
-<!doctype html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Romagna Short Stay — The best short rental properties in Emilia-Romagna." />
-    <title>Romagna Short Stay</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Meta description (148 characters) -->
+  <meta name="description" content="Romagna Short Stay: curated apartments, B&Bs and holiday homes in Romagna, Italy. Verified properties, book directly on Airbnb. Sea, hills, art cities." />
+  <meta name="keywords" content="short rentals romagna, holiday apartments romagna, holiday homes emilia romagna, short rental cesena, short rental rimini, romagna hills apartments, b&b romagna italy" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.romagna-short-stay.com/" />
+  <meta property="og:title" content="Romagna Short Stay — Holiday Apartments &amp; Short Rentals in Romagna, Italy" />
+  <meta property="og:description" content="Curated directory of apartments, B&Bs and holiday homes in Romagna. Verified properties, direct booking on Airbnb." />
+  <meta property="og:image" content="https://www.romagna-short-stay.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="Romagna Short Stay" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Romagna Short Stay — Holiday Apartments &amp; Short Rentals in Romagna, Italy" />
+  <meta name="twitter:description" content="Curated directory of apartments, B&Bs and holiday homes in Romagna. Verified properties, direct booking on Airbnb." />
+  <meta name="twitter:image" content="https://www.romagna-short-stay.com/og-image.jpg" />
+
+  <title>Romagna Short Stay — Holiday Apartments &amp; Short Rentals in Romagna, Italy</title>
+
+  <!-- Date signals -->
+  <meta property="article:published_time" content="2026-04-21T00:00:00+02:00" />
+  <meta property="article:modified_time" content="2026-04-21T00:00:00+02:00" />
+
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://www.romagna-short-stay.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.romagna-short-stay.com/" />
+  <link rel="alternate" hreflang="it" href="https://www.romagna-affitti-brevi.it/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.romagna-affitti-brevi.it/" />
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Analytics 4 — cookieless, GDPR compliant, no banner required -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      client_storage: 'none'
+    });
+  </script>
+
+  <!-- Schema JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Romagna Short Stay",
+    "url": "https://www.romagna-short-stay.com/"
+  }
+  </script>
+
+  <!-- Schema JSON-LD: Person (manager) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cesare",
+    "url": "https://www.romagna-short-stay.com/"
+  }
+  </script>
+
+  <!-- Schema JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Romagna Short Stay",
+        "item": "https://www.romagna-short-stay.com/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Romagna Short Stay",
+    "description": "Curated directory of apartments, B&Bs and holiday homes in Romagna, Italy. Verified properties between Cesena, Rimini, the Romagna hills and the Adriatic Riviera.",
+    "url": "https://www.romagna-short-stay.com/",
+    "telephone": "+39 392 520 0650",
+    "email": "luceacollection@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Corso Garibaldi",
+      "addressLocality": "Cesena",
+      "addressRegion": "FC",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.1396,
+      "longitude": 12.2431
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Emilia-Romagna"
+    },
+    "sameAs": [
+      "https://www.romagna-affitti-brevi.it/"
+    ]
+  }
+  </script>
+
+  <!-- Schema JSON-LD: FAQPage — questions identical to GEO/AEO analysis workflow -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where to find quality short-term rentals in Romagna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Romagna Short Stay is a curated directory of selected apartments, B&Bs and holiday homes across Romagna — from Cesena to Rimini, from the Romagna hills to the Adriatic coast. Every property is verified and bookable directly on Airbnb."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where to rent a holiday home between Cesena and Rimini?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Romagna offers a wide variety of short-term rentals between Cesena and Rimini — along the coast and in the inland hills. On Romagna Short Stay you'll find apartments in Cesena, Cesenatico, Rimini and in the Romagna hill villages, all within 40 minutes of each other."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Best holiday apartments in the Romagna hills?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Romagna hills between Forlì and Cesena offer some of the most characterful accommodation in the region: medieval villages, vineyards, and panoramic views over the Po Valley and the Adriatic coast. On Romagna Short Stay you'll find selected apartments in villages like Bertinoro, Longiano and Meldola."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Best place to rent near the sea in Romagna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cesenatico, Rimini and Cervia are the main destinations for short-term rentals on the Romagna coast. On Romagna Short Stay you'll find selected apartments a few minutes from the beach, with direct access to the Adriatic Riviera and all its amenities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Short-term rental near Rimini with sea view?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rimini and Marina Centro are among the most sought-after areas for sea-view short rentals in Romagna. On Romagna Short Stay you'll find selected apartments in Rimini and surroundings, from modern studios steps from the beach to larger family apartments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to find a short-term rental in Romagna for families?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On Romagna Short Stay you can filter properties by number of guests and accommodation type. For families, we recommend apartments with a fully equipped kitchen and properties with multiple bedrooms. Many directory listings are pet-friendly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Short-term rentals with kitchen in Romagna for a week?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All apartments on Romagna Short Stay are entire homes with fully equipped kitchens — ideal for week-long or longer stays. Cooking with local products (piadina flatbread, Sangiovese wine, squacquerone cheese) is part of the Romagna experience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Holiday homes in Romagna that accept pets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Several properties in the Romagna Short Stay directory accept pets. Check individual listings to verify each property's pet policy. Romagna is a pet-friendly destination: dog-friendly beaches on the coast and hill trails accessible to four-legged companions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Holiday apartments in Romagna for remote working?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Romagna Short Stay includes properties ideal for remote working: apartments with wifi connection, comfortable workspaces and a kitchen for independent meal management. Some properties are specifically equipped with a dedicated desk and fibre broadband."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where to stay in Romagna close to multiple cities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Romagna's geographical position is strategic: from an apartment in the heart of the region you can reach Cesena (15 min), Forlì (20 min), Ravenna (40 min), Rimini (40 min), San Marino (35 min) and Bologna (60 min) in a single stay."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+<body>
+
+  <!-- Noscript: static content for Wave 1 crawlers (GPTBot, PerplexityBot, Googlebot) -->
+  <!-- Ignored by JS-enabled browsers, read by crawlers as plain text -->
+  <noscript>
+    <main>
+      <article>
+        <h1>Romagna Short Stay — Short-term rental directory in Emilia-Romagna, Italy</h1>
+        <p>
+          Romagna Short Stay is a curated directory of apartments, B&Bs and holiday homes
+          in Romagna, Italy — from Cesena to Rimini, from the Romagna hills to the Adriatic
+          Riviera. Every property is verified and bookable directly on Airbnb.
+        </p>
+        <p>
+          Contact: Corso Garibaldi, Cesena FC, Italy ·
+          Tel: +39 392 520 0650 ·
+          Email: luceacollection@gmail.com ·
+          IT site: https://www.romagna-affitti-brevi.it/
+        </p>
+
+        <h2>Property types</h2>
+        <ul>
+          <li>Holiday apartments with fully equipped kitchen</li>
+          <li>B&Bs and short-term rooms</li>
+          <li>Villas and holiday homes for families</li>
+          <li>Agriturismi in the Romagna hills</li>
+        </ul>
+
+        <h2>Areas covered by the directory</h2>
+        <ul>
+          <li>Cesena and province (Forlì-Cesena)</li>
+          <li>Rimini and Marina Centro (Adriatic coast)</li>
+          <li>Cesenatico and Cervia (Romagna Riviera)</li>
+          <li>Romagna hills: Bertinoro, Longiano, Meldola, Predappio</li>
+          <li>Ravenna and surroundings</li>
+          <li>Forlì and province</li>
+        </ul>
+
+        <h2>Ideal for</h2>
+        <ul>
+          <li>Families on holiday by the sea or in the hills</li>
+          <li>Couples seeking a romantic weekend in Romagna</li>
+          <li>Remote workers and digital nomads</li>
+          <li>Wine tourism and Romagna food tourism</li>
+          <li>Cultural tourism: Ravenna UNESCO, Rimini, Cesena</li>
+          <li>Stays with pets</li>
+        </ul>
+
+        <h2>Frequently asked questions about short rentals in Romagna</h2>
+
+        <h3>Where to find quality short-term rentals in Romagna?</h3>
+        <p>Romagna Short Stay is a curated directory of selected apartments, B&Bs and holiday homes across Romagna — from Cesena to Rimini, from the Romagna hills to the Adriatic coast. Every property is verified and bookable directly on Airbnb.</p>
+
+        <h3>Where to rent a holiday home between Cesena and Rimini?</h3>
+        <p>Romagna offers a wide variety of short-term rentals between Cesena and Rimini — along the coast and in the inland hills. On Romagna Short Stay you'll find apartments in Cesena, Cesenatico, Rimini and in the Romagna hill villages, all within 40 minutes of each other.</p>
+
+        <h3>Best holiday apartments in the Romagna hills?</h3>
+        <p>The Romagna hills between Forlì and Cesena offer some of the most characterful accommodation in the region: medieval villages, vineyards, and panoramic views over the Po Valley and the Adriatic coast. On Romagna Short Stay you'll find selected apartments in villages like Bertinoro, Longiano and Meldola.</p>
+
+        <h3>Best place to rent near the sea in Romagna?</h3>
+        <p>Cesenatico, Rimini and Cervia are the main destinations for short-term rentals on the Romagna coast. On Romagna Short Stay you'll find selected apartments a few minutes from the beach, with direct access to the Adriatic Riviera.</p>
+
+        <h3>Short-term rental near Rimini with sea view?</h3>
+        <p>Rimini and Marina Centro are among the most sought-after areas for sea-view short rentals in Romagna. On Romagna Short Stay you'll find selected apartments in Rimini and surroundings, from modern studios steps from the beach to larger family apartments.</p>
+
+        <h3>How to find a short-term rental in Romagna for families?</h3>
+        <p>On Romagna Short Stay you can filter properties by number of guests and accommodation type. For families, we recommend apartments with a fully equipped kitchen and properties with multiple bedrooms. Many directory listings are pet-friendly.</p>
+
+        <h3>Short-term rentals with kitchen in Romagna for a week?</h3>
+        <p>All apartments on Romagna Short Stay are entire homes with fully equipped kitchens — ideal for week-long or longer stays. Cooking with local products (piadina flatbread, Sangiovese wine, squacquerone cheese) is part of the Romagna experience.</p>
+
+        <h3>Holiday homes in Romagna that accept pets?</h3>
+        <p>Several properties in the Romagna Short Stay directory accept pets. Romagna is a pet-friendly destination: dog-friendly beaches on the coast and hill trails accessible to four-legged companions.</p>
+
+        <h3>Holiday apartments in Romagna for remote working?</h3>
+        <p>Romagna Short Stay includes properties ideal for remote working: apartments with wifi connection, comfortable workspaces and a kitchen for independent meal management. Some properties have a dedicated desk and fibre broadband.</p>
+
+        <h3>Where to stay in Romagna close to multiple cities?</h3>
+        <p>Romagna's geographical position is strategic: from an apartment in the heart of the region you can reach Cesena (15 min), Forlì (20 min), Ravenna (40 min), Rimini (40 min), San Marino (35 min) and Bologna (60 min) in a single stay.</p>
+
+        <p>
+          <time hidden datetime="2026-04-21">21 April 2026</time>
+        </p>
+      </article>
+    </main>
+  </noscript>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
