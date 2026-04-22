@@ -60,6 +60,14 @@ function DiagonalDivider({ flip = false }) {
 // ── Nav ───────────────────────────────────────────────────────────────────────
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleLinkClick = () => setMenuOpen(false);
+  const navLinks = [
+    { label: "Properties", href: "#properties" },
+    { label: "Blog", href: "#blog" },
+    { label: "FAQ", href: "#faq" },
+    { label: "IT", href: "https://www.romagna-affitti-brevi.it/" },
+  ];
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", h);
@@ -68,9 +76,9 @@ function Nav() {
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 200,
-      background: scrolled ? "rgba(250,248,244,0.97)" : "rgba(250,248,244,0.88)",
+      background: scrolled || menuOpen ? "rgba(250,248,244,0.97)" : "rgba(250,248,244,0.88)",
       backdropFilter: "blur(14px)",
-      borderBottom: `1px solid ${scrolled ? "rgba(160,120,42,0.18)" : "rgba(160,120,42,0.07)"}`,
+      borderBottom: `1px solid ${scrolled || menuOpen ? "rgba(160,120,42,0.18)" : "rgba(160,120,42,0.07)"}`,
       transition: "all 0.4s ease",
     }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 1.5rem",
@@ -90,13 +98,8 @@ function Nav() {
               lineHeight: 1, marginTop: 2 }}>Short Rentals</div>
           </div>
         </a>
-        <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-          {[
-            { label: "Properties", href: "#properties" },
-            { label: "Blog", href: "#blog" },
-            { label: "FAQ", href: "#faq" },
-            { label: "IT", href: "https://www.romagna-affitti-brevi.it/" },
-          ].map(({ label, href }) => (
+        <div className="nav-desktop" style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+          {navLinks.map(({ label, href }) => (
             <a key={href} href={href}
               target={href.startsWith("http") ? "_blank" : "_self"}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
@@ -104,8 +107,7 @@ function Nav() {
                 fontFamily: "'DM Sans',sans-serif", fontSize: "0.75rem",
                 color: label === "IT" ? C.textSoft : C.textMid,
                 textDecoration: "none", letterSpacing: "0.08em",
-                textTransform: "uppercase", fontWeight: 500,
-                transition: "color 0.2s",
+                textTransform: "uppercase", fontWeight: 500, transition: "color 0.2s",
               }}
               onMouseEnter={e => e.currentTarget.style.color = C.gold}
               onMouseLeave={e => e.currentTarget.style.color = label === "IT" ? C.textSoft : C.textMid}
@@ -118,15 +120,54 @@ function Nav() {
               fontFamily: "'DM Sans',sans-serif", transition: "background 0.2s" }}
             onMouseEnter={e => e.currentTarget.style.background = "#8a6520"}
             onMouseLeave={e => e.currentTarget.style.background = C.gold}>
-            <span className="nav-cta-long">List your property</span>
-            <span className="nav-cta-short">✉️</span>
+            List your property
           </a>
         </div>
+        <button className="nav-hamburger" onClick={() => setMenuOpen(o => !o)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          style={{ display: "none", background: "transparent", border: "none",
+            cursor: "pointer", padding: "0.4rem", flexDirection: "column",
+            gap: "5px", alignItems: "center", justifyContent: "center" }}>
+          <span style={{ display: "block", width: 22, height: 2, background: C.gold,
+            transition: "all 0.3s ease",
+            transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none" }} />
+          <span style={{ display: "block", width: 22, height: 2, background: C.gold,
+            transition: "all 0.3s ease", opacity: menuOpen ? 0 : 1 }} />
+          <span style={{ display: "block", width: 22, height: 2, background: C.gold,
+            transition: "all 0.3s ease",
+            transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none" }} />
+        </button>
       </div>
+      {menuOpen && (
+        <div style={{ borderTop: `1px solid ${C.border}`,
+          background: "rgba(250,248,244,0.98)",
+          padding: "1rem 1.5rem 1.5rem",
+          display: "flex", flexDirection: "column" }}>
+          {navLinks.map(({ label, href }) => (
+            <a key={href} href={href} onClick={handleLinkClick}
+              target={href.startsWith("http") ? "_blank" : "_self"}
+              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+              style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.9rem",
+                color: C.text, textDecoration: "none", letterSpacing: "0.08em",
+                textTransform: "uppercase", fontWeight: 500,
+                padding: "1rem 0", borderBottom: `1px solid ${C.border}`, display: "block" }}>
+              {label}
+            </a>
+          ))}
+          <a href="mailto:luceacollection@gmail.com" onClick={handleLinkClick}
+            style={{ display: "block", textAlign: "center", background: C.gold,
+              color: "#fff", padding: "0.85rem 1rem", marginTop: "1rem",
+              fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.12em",
+              textTransform: "uppercase", textDecoration: "none",
+              fontFamily: "'DM Sans',sans-serif" }}>
+            List your property
+          </a>
+        </div>
+      )}
       <style>{`
         @media(max-width:768px){
-          .nav-cta-long{display:none}
-          .nav-cta-short{display:inline}
+          .nav-desktop { display: none !important; }
+          .nav-hamburger { display: flex !important; }
         }
       `}</style>
     </nav>
