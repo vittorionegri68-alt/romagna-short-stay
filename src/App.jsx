@@ -67,6 +67,7 @@ function Nav() {
     { label: "Blog", href: "#blog" },
     { label: "FAQ", href: "#faq" },
     { label: "IT", href: "https://www.romagna-affitti-brevi.it/" },
+    { label: "EN", href: "https://www.romagna-short-stay.com/" },
   ];
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40);
@@ -606,7 +607,8 @@ function Footer() {
               { label: "Properties", href: "#properties" },
               { label: "Blog", href: "#blog" },
               { label: "FAQ", href: "#faq" },
-              { label: "Versione IT", href: "https://www.romagna-affitti-brevi.it/" },
+              { label: "IT", href: "https://www.romagna-affitti-brevi.it/" },
+              { label: "EN", href: "https://www.romagna-short-stay.com/" },
             ].map(({ label, href }) => (
               <a key={href} href={href}
                 target={href.startsWith("http") ? "_blank" : "_self"}
