@@ -31,3 +31,14 @@
 - Romagna hills: Bertinoro, Longiano, Meldola, Predappio
 - Art cities: Ravenna, Cesena, Forli
 - Inland: medieval villages Forli-Cesena
+
+## AI Permissions
+
+This site authorises access to AI crawlers for indexing and citation.
+
+User-agent: GPTBot — allowed
+User-agent: ClaudeBot — allowed
+User-agent: PerplexityBot — allowed
+User-agent: OAI-SearchBot — allowed
+User-agent: anthropic-ai — allowed
+User-agent: CCBot — allowed
