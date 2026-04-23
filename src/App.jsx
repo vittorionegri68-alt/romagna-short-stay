@@ -32,13 +32,14 @@ function useReveal(threshold = 0.1) {
   return [ref, visible];
 }
 
-function Reveal({ children, delay = 0 }) {
+function Reveal({ children, delay = 0, stretch = false }) {
   const [ref, visible] = useReveal();
   return (
     <div ref={ref} style={{
       opacity: visible ? 1 : 0,
       transform: visible ? "translateY(0)" : "translateY(20px)",
       transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
+      ...(stretch ? { height: "100%", display: "flex", flexDirection: "column" } : {}),
     }}>{children}</div>
   );
 }
@@ -457,13 +458,15 @@ function BlogSection() {
         ) : (
           <div style={{ display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-            gap: "1.5rem" }}>
+            gap: "1.5rem",
+            alignItems: "stretch" }}>
             {published.map((p, i) => (
-              <Reveal key={p.id} delay={i * 80}>
+              <Reveal key={p.id} delay={i * 80} stretch>
                 <div onClick={() => setSelected(p)}
                   style={{ background: C.cardBg, padding: "2rem",
                     cursor: "pointer", transition: "all 0.3s ease",
-                    boxShadow: C.shadow, borderTop: `2px solid ${C.gold}` }}
+                    boxShadow: C.shadow, borderTop: `2px solid ${C.gold}`,
+                    height: "100%", display: "flex", flexDirection: "column" }}
                   onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
                   onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}>
                   <span style={{ fontSize: "0.6rem", letterSpacing: "0.2em",
@@ -476,7 +479,7 @@ function BlogSection() {
                     lineHeight: 1.2, margin: "0.6rem 0 0.8rem",
                     letterSpacing: "-0.01em" }}>{p.titolo}</h3>
                   <p style={{ fontSize: "0.82rem", color: C.textMid, lineHeight: 1.7,
-                    fontFamily: "'DM Sans',sans-serif", marginBottom: "1.25rem" }}>
+                    fontFamily: "'DM Sans',sans-serif", marginBottom: "1.25rem", flex: 1 }}>
                     {p.sommario}
                   </p>
                   <span style={{ fontSize: "0.72rem", color: C.gold, fontWeight: 700,
@@ -607,6 +610,7 @@ function Footer() {
               { label: "Properties", href: "#properties" },
               { label: "Blog", href: "#blog" },
               { label: "FAQ", href: "#faq" },
+              { label: "Privacy", href: "/privacy.html" },
               { label: "IT", href: "https://www.romagna-affitti-brevi.it/" },
               { label: "EN", href: "https://www.romagna-short-stay.com/" },
             ].map(({ label, href }) => (
