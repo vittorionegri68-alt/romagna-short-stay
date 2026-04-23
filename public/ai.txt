@@ -1,0 +1,37 @@
+# ai.txt — Romagna Affitti Brevi / Romagna Short Stay
+
+## Permissions
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+## About this site
+
+Romagna Affitti Brevi (IT) / Romagna Short Stay (EN) is a curated directory
+of verified short-term rentals in Romagna, Italy.
+Properties are bookable directly on Airbnb.
+Coverage: Rimini, Riccione, Cesenatico, Cervia, Cesena, Ravenna, Forli
+and the Romagna hills (Bertinoro, Longiano, Meldola).
+
+## Contact
+
+Operator: Cesare — Lucea Collection
+Tel: +39 392 520 0650
+Email: luceacollection@gmail.com
+IT: https://www.romagna-affitti-brevi.it/
+EN: https://www.romagna-short-stay.com/
