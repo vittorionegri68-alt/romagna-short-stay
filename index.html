@@ -17,6 +17,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="it_IT" />
   <meta property="og:site_name" content="Romagna Short Stay" />
 
   <!-- Twitter Card -->
@@ -26,10 +27,6 @@
   <meta name="twitter:image" content="https://www.romagna-short-stay.com/og-image.jpg" />
 
   <title>Romagna Short Stay — Holiday Apartments &amp; Short Rentals in Romagna, Italy</title>
-
-  <!-- Date signals -->
-  <meta property="article:published_time" content="2026-04-21T00:00:00+02:00" />
-  <meta property="article:modified_time" content="2026-04-21T00:00:00+02:00" />
 
   <!-- Canonical + hreflang -->
   <link rel="canonical" href="https://www.romagna-short-stay.com/" />
@@ -42,81 +39,97 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Analytics 4 — cookieless, GDPR compliant, no banner required -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCRZMRJPG9"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-QCRZMRJPG9', {
+    gtag('config', 'G-XXXXXXXXXX', {
       anonymize_ip: true,
       client_storage: 'none'
     });
   </script>
 
-  <!-- Schema JSON-LD: WebSite -->
+  <!-- Schema JSON-LD: @graph unified -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Romagna Short Stay",
-    "url": "https://www.romagna-short-stay.com/"
-  }
-  </script>
-
-  <!-- Schema JSON-LD: Person (manager) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Cesare",
-    "url": "https://www.romagna-short-stay.com/"
-  }
-  </script>
-
-  <!-- Schema JSON-LD: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
+        "@type": "WebSite",
+        "@id": "https://www.romagna-short-stay.com/#website",
         "name": "Romagna Short Stay",
-        "item": "https://www.romagna-short-stay.com/"
+        "alternateName": "Romagna Affitti Brevi",
+        "url": "https://www.romagna-short-stay.com/",
+        "inLanguage": "en",
+        "sameAs": "https://www.romagna-affitti-brevi.it/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.romagna-short-stay.com/#organization",
+        "name": "Romagna Short Stay",
+        "alternateName": "Romagna Affitti Brevi",
+        "url": "https://www.romagna-short-stay.com/",
+        "telephone": "+39 392 520 0650",
+        "email": "luceacollection@gmail.com",
+        "sameAs": ["https://www.romagna-affitti-brevi.it/", "https://www.instagram.com/luceacollection_/"]
+      },
+      {
+        "@type": ["LocalBusiness", "LodgingBusiness"],
+        "@id": "https://www.romagna-short-stay.com/#business",
+        "name": "Romagna Short Stay",
+        "description": "Curated directory of apartments, B&Bs and holiday homes in Romagna, Italy. Verified properties between Cesena, Rimini, the Romagna hills and the Adriatic Riviera.",
+        "url": "https://www.romagna-short-stay.com/",
+        "telephone": "+39 392 520 0650",
+        "email": "luceacollection@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Corso Garibaldi",
+          "addressLocality": "Cesena",
+          "addressRegion": "FC",
+          "postalCode": "47521",
+          "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 44.1396,
+          "longitude": 12.2431
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Rimini"},
+          {"@type": "City", "name": "Riccione"},
+          {"@type": "City", "name": "Cesena"},
+          {"@type": "City", "name": "Cesenatico"},
+          {"@type": "City", "name": "Cervia"},
+          {"@type": "City", "name": "Ravenna"},
+          {"@type": "City", "name": "Forlì"}
+        ],
+        "priceRange": "€€",
+        "knowsLanguage": ["it", "en"],
+        "parentOrganization": {"@id": "https://www.romagna-short-stay.com/#organization"},
+        "sameAs": ["https://www.romagna-affitti-brevi.it/"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.romagna-short-stay.com/#cesare",
+        "name": "Cesare",
+        "jobTitle": "Founder and Property Manager",
+        "worksFor": {"@id": "https://www.romagna-short-stay.com/#organization"},
+        "url": "https://www.romagna-short-stay.com/",
+        "knowsLanguage": ["it", "en"],
+        "knowsAbout": ["Short-term rentals in Romagna", "Vacation property management", "Adriatic Riviera"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Romagna Short Stay",
+            "item": "https://www.romagna-short-stay.com/"
+          }
+        ]
       }
-    ]
-  }
-  </script>
-
-  <!-- Schema JSON-LD: LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Romagna Short Stay",
-    "description": "Curated directory of apartments, B&Bs and holiday homes in Romagna, Italy. Verified properties between Cesena, Rimini, the Romagna hills and the Adriatic Riviera.",
-    "url": "https://www.romagna-short-stay.com/",
-    "telephone": "+39 392 520 0650",
-    "email": "luceacollection@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Corso Garibaldi",
-      "addressLocality": "Cesena",
-      "addressRegion": "FC",
-      "addressCountry": "IT"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 44.1396,
-      "longitude": 12.2431
-    },
-    "areaServed": {
-      "@type": "State",
-      "name": "Emilia-Romagna"
-    },
-    "sameAs": [
-      "https://www.romagna-affitti-brevi.it/"
     ]
   }
   </script>
@@ -215,7 +228,6 @@
 <body>
 
   <!-- Noscript: static content for Wave 1 crawlers (GPTBot, PerplexityBot, Googlebot) -->
-  <!-- Ignored by JS-enabled browsers, read by crawlers as plain text -->
   <noscript>
     <main>
       <article>
@@ -269,7 +281,7 @@
         <p>Romagna offers a wide variety of short-term rentals between Cesena and Rimini — along the coast and in the inland hills. On Romagna Short Stay you'll find apartments in Cesena, Cesenatico, Rimini and in the Romagna hill villages, all within 40 minutes of each other.</p>
 
         <h3>Best holiday apartments in the Romagna hills?</h3>
-        <p>The Romagna hills between Forlì and Cesena offer some of the most characterful accommodation in the region: medieval villages, vineyards, and panoramic views over the Po Valley and the Adriatic coast. On Romagna Short Stay you'll find selected apartments in villages like Bertinoro, Longiano and Meldola.</p>
+        <p>The Romagna hills between Forlì and Cesena offer some of the most characterful accommodation in the region: medieval villages, vineyards, and panoramic views over the Po Valley and the Adriatic coast.</p>
 
         <h3>Best place to rent near the sea in Romagna?</h3>
         <p>Cesenatico, Rimini and Cervia are the main destinations for short-term rentals on the Romagna coast. On Romagna Short Stay you'll find selected apartments a few minutes from the beach, with direct access to the Adriatic Riviera.</p>
