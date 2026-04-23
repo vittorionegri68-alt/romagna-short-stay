@@ -1,13 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://www.romagna-short-stay.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.romagna-short-stay.com/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.romagna-affitti-brevi.it/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.romagna-affitti-brevi.it/"/>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+# robots.txt — Romagna Short Stay (EN)
+User-agent: *
+Allow: /
+
+# AI crawlers — explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.romagna-short-stay.com/sitemap.xml
