@@ -60,8 +60,8 @@ export const strutture = [
       { luogo: "Rimini", tempo: "40 min" },
       { luogo: "Bologna", tempo: "60 min" },
     ],
-    rating: 5.0,
-    recensioni: 24,
+    rating: 4.5,
+    recensioni: 10,
     prezzo_da: 85,
     url: "https://casa-cavour-en.vercel.app/",
     airbnb: "https://airbnb.com/h/casacavour-bertinoro",
@@ -92,7 +92,7 @@ export const strutture = [
     prezzo_da: 120,
     url: "https://laperla-seven.vercel.app/",
     airbnb: "https://www.airbnb.it/rooms/1310946139319199865",
-    attivo: true,
+    attivo: false,
   },
 
   {
@@ -118,7 +118,7 @@ export const strutture = [
     prezzo_da: 125,
     url: "https://scalino66.vercel.app/",
     airbnb: "https://www.airbnb.it/rooms/1388960535225462602",
-    attivo: true,
+    attivo: false,
   },
   {
   id: 'garibaldina-75',
