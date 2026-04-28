@@ -38,6 +38,7 @@ import casaCavourCover from './assest/strutture/casa-cavour/Cover.jpg'
 import perlacover from './assest/strutture/perla/cover.jpg'
 import scalinocover from './assest/strutture/Teatro/cover.jpg'
 import garibaldinacover from './assest/strutture/garibaldina/cover.jpg'
+import samillacover from './assest/strutture/samilla/cover.jpg'
 
 export const strutture = [
   {
@@ -148,5 +149,34 @@ export const strutture = [
   airbnb: "https://www.airbnb.it/rooms/1558562623962692060",
   attivo: true,
 },
+
+  {
+    id: 'samilla-loft',
+    nome: 'Samilla Loft',
+    cover: samillacover,
+    localita: 'Rimini (RN)',
+    regione: 'Emilia-Romagna',
+    tipologia: 'Apartment',
+    ospiti: 3,
+    camere: 1,
+    bagni: 1,
+    animali: null,
+    descrizione: 'Modern and bright loft in the heart of Rimini, steps from the Adriatic beach. Sea view, Wi-Fi, air conditioning and bikes included. Ideal for 2-3 guests.',
+    tag: ['Sea view', 'Bikes included', 'Wi-Fi', 'Air conditioning', 'Self check-in'],
+    distanze: [
+      { luogo: 'Rimini beach', tempo: '2 min on foot' },
+      { luogo: 'Rimini city centre', tempo: '10 min on foot' },
+      { luogo: 'Cesena', tempo: '30 min by car' },
+      { luogo: 'San Marino', tempo: '35 min by car' },
+      { luogo: 'Ravenna', tempo: '40 min by car' },
+      { luogo: 'Bologna', tempo: '80 min by car' },
+    ],
+    rating: 4.88,
+    recensioni: 0,
+    prezzo_da: null,
+    url: 'https://samilla.romagna-short-stay.com/',
+    airbnb: 'https://www.airbnb.it/rooms/1618206280550914997',
+    attivo: true,
+  },
 
 ];
