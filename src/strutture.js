@@ -173,7 +173,7 @@ export const strutture = [
     ],
     rating: 4.88,
     recensioni: 0,
-    prezzo_da: null,
+    prezzo_da: 145,
     url: 'https://samilla.romagna-short-stay.com/',
     airbnb: 'https://www.airbnb.it/rooms/1618206280550914997',
     attivo: true,
