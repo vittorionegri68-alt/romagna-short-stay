@@ -13,6 +13,41 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const posts = [
+
+{
+  id: "rab-geo-aeo-where-to-stay-near-multiple-cities-2026-en",
+  titolo: "Where to Stay in Romagna Near Multiple Cities: A Strategic Location Guide",
+  data: "2026-05-18",
+  categoria: "Romagna Travel Guide",
+  sommario: "Looking for a short-term rental in Romagna within easy reach of Cesena, Rimini, Ravenna and the hilltop villages? Discover the best areas to explore the entire region from a single, well-positioned base.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "There comes a moment when planning a trip to Romagna when you realise this corner of Italy offers far too much to stay in one place. The Byzantine mosaics of Ravenna, Rimini's ancient Roman arches, Cesena's Renaissance library, the medieval villages perched on the Romagna hills — everything beckons. The question becomes inevitable: where to stay in Romagna to have it all within reach?" },
+    { tipo: "paragrafo", testo: "The answer lies in the geography itself. Romagna is remarkably compact. Roads wind from the Adriatic coast to the Apennine foothills in less than an hour. Choosing the right location for your accommodation transforms a holiday into seamless exploration. Whether you're seeking a vacation rental in Romagna for a week or a holiday apartment for a long weekend, position is everything." },
+    { tipo: "titoletto", testo: "Cesena: the geographic heart of Romagna" },
+    { tipo: "paragrafo", testo: "If you placed a pin on the map at Romagna's most central point, it would land on Cesena. From here, Cesenatico and the sea are 20 minutes away, Rimini half an hour, Ravenna 40 minutes. The hilltop villages of Longiano and Bertinoro sit just 15 minutes distant. The city itself rewards exploration: the Malatestiana Library, a UNESCO Memory of the World site, preserves illuminated manuscripts in a fifteenth-century hall unchanged since its creation. A holiday apartment in Cesena offers the advantage of a quiet urban base — restaurants, markets, services — from which to set out each day toward different destinations." },
+    { tipo: "titoletto", testo: "The hills between Cesena and Rimini: farmhouses with strategic views" },
+    { tipo: "paragrafo", testo: "For those who crave countryside tranquillity without sacrificing mobility, the Romagna hills between Cesena and Rimini present an ideal choice. Villages like Longiano, Sogliano al Rubicone and Santarcangelo di Romagna offer panoramas stretching to the Adriatic. From a farmhouse in this belt of hills, you can reach Cesena in 15-20 minutes, Cesenatico in half an hour, Rimini in 25-35 minutes. It's the perfect position for travellers with a car who want to alternate beach days with cultural excursions — perhaps stopping to taste Sogliano's DOP cave-aged cheese or wines from local cellars." },
+    { tipo: "titoletto", testo: "Cesenatico and the Romagna coast: a seaside base with cities nearby" },
+    { tipo: "paragrafo", testo: "Those unwilling to forgo the seafront find in Cesenatico an excellent compromise. The canal port sketched by Leonardo da Vinci, the colourful fishermen's houses, the sandy beach — everything speaks of holiday. Yet the location is also strategic. Cesena lies 15-20 km away, Rimini 20-25 km, Ravenna 35-45 km. An apartment with kitchen on the Romagna coast allows you to live the rhythm of the sea — breakfast on the terrace, lunch on the beach — then head off in the afternoon to visit a city of art. The Emilia-Romagna Tourism portal highlights Cesenatico as an ideal starting point for itineraries combining coast and culture." },
+    { tipo: "titoletto", testo: "Rimini: the Riviera hub with excellent connections" },
+    { tipo: "paragrafo", testo: "Rimini is far more than beaches and nightlife. The Arch of Augustus, the Tiberius Bridge, the Borgo San Giuliano neighbourhood tell two thousand years of history. And the railway station makes it Romagna's best-connected hub: frequent trains to Ravenna, Bologna, Cesena. For those travelling without a car, a remote working rental in Romagna based in Rimini offers the best of both worlds: the ability to work with a stable connection and explore the region on weekends using public transport. From here, the Valmarecchia villages — Verucchio, San Leo — are 15-30 minutes away." },
+    { tipo: "titoletto", testo: "Ravenna and its beaches: mosaics and pine forests" },
+    { tipo: "paragrafo", testo: "Those who place culture first find Ravenna an essential base. Eight UNESCO monuments, mosaics that leave visitors breathless, a historic centre made for cycling. The Ravenna beaches — Punta Marina, Marina di Ravenna, Lido di Classe — offer wide sands and pine forests where tourism moves at a gentler pace. From here Cesenatico is 35-45 km, Cesena 40 km, Rimini about an hour. It's the right choice for those who want to immerse themselves in history while enjoying occasional beach days away from the busier stretches of the Adriatic Romagna coast." },
+    { tipo: "titoletto", testo: "How to choose: families, couples, travellers with pets" },
+    { tipo: "paragrafo", testo: "The best area also depends on who is travelling. Family holiday rentals in Romagna find ample space, gardens and shared pools in the hills. Those seeking a pet friendly rental in Romagna will appreciate the inland farmhouses, where dogs and cats are often welcome. Couples looking for romance might opt for a B&B in a historic village like Longiano or Santarcangelo. Remote workers will find well-equipped apartments in both Cesena and Rimini, with fast connections and cafés where work and leisure blend seamlessly." },
+    { tipo: "titoletto", testo: "Finding the right property" },
+    { tipo: "paragrafo", testo: "To book a short-term rental in Romagna requires attention to location, but also to quality. Romagna Short Stay gathers a selection of verified properties — apartments, B&Bs, villas, farmhouses — spread across coast, hills and cities. Each listing shows the exact position, distances to main destinations and available amenities. It's a useful starting point for anyone wanting to explore Romagna from a single strategic base, choosing the accommodation best suited to their needs." },
+    { tipo: "titoletto", testo: "Explore the properties" },
+    { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
+    { tipo: "link", testo: "https://www.romagna-short-stay.com/#properties", etichetta: "Browse properties" },
+    { tipo: "titoletto", testo: "Read also" },
+    { tipo: "paragrafo", testo: "On the Romagna Short Stay blog you will find more articles about the territory, local experiences and practical tips for planning your stay in Romagna." },
+    { tipo: "link", testo: "https://www.romagna-short-stay.com/#blog" },
+    { tipo: "titoletto", testo: "Follow us" },
+    { tipo: "link", testo: "https://www.instagram.com/luceacollection_/" },
+  ],
+  attivo: true,
+},
 {
   id: "rab-geo-aeo-where-to-stay-near-multiple-cities-2026-en",
   titolo: "Where to Stay in Romagna Near Multiple Cities: Finding Your Perfect Base",
