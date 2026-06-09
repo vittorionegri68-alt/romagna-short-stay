@@ -13,6 +13,38 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const posts = [
+  {
+  id: "rab-geo-aeo-vacation-rental-cesena-rimini-2026-en",
+  titolo: "Where to rent a holiday apartment between Cesena and Rimini: a local's guide",
+  data: "2026-06-08",
+  categoria: "Romagna Travel Guide",
+  sommario: "From the Adriatic coast to the rolling Romagna hills, here's where to find quality short-term rentals between Cesena and Rimini. A practical guide to choosing the right area for your Italian holiday.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "There's a stretch of Romagna that has it all: wide sandy beaches, gentle hills climbing toward the Apennines, medieval villages crowned by Malatesta fortresses, trattorias where the piadina arrives warm and the Sangiovese keeps flowing. This is the corridor between Cesena and Rimini—barely thirty kilometers as the crow flies, yet a whole world when it comes to choosing where to stay." },
+    { tipo: "paragrafo", testo: "If you're looking for a vacation rental in Romagna, this area offers something for every type of traveler: sea-view apartments in Cesenatico, farmhouses among the vineyards of the Cesena hills, B&Bs tucked into the alleys of Santarcangelo. The question isn't whether you'll find something—it's what kind of experience you're after." },
+    { tipo: "titoletto", testo: "Cesenatico: the Romagna coast at its most authentic" },
+    { tipo: "paragrafo", testo: "Fifteen minutes from Cesena, Cesenatico sits at the perfect intersection of coast and countryside. The Porto Canale designed by Leonardo da Vinci, the historic boats of the Maritime Museum, the seafood restaurants lining the quays—this is a real fishing town, not a theme park. Holiday apartments here range from beachfront units to quieter spots in the back streets, many with fully equipped kitchens for self-catering. From here, Rimini is twenty minutes away, the hills half an hour." },
+    { tipo: "titoletto", testo: "Rimini: when you want everything within reach" },
+    { tipo: "paragrafo", testo: "Rimini needs no introduction, but it deserves a second look beyond the clichés. Yes, there's the endless beach and the nightlife. But there's also the Arch of Augustus, the Tiberius Bridge, the Malatesta Temple, the new Fellini museum. For those seeking an apartment with kitchen in Romagna, Rimini offers rentals at every price point, from seafront residences to apartments in the historic center. It's the right choice if you're traveling with children and want organized beaches, or if you need services and transport links without sacrificing culture." },
+    { tipo: "titoletto", testo: "The Romagna hills: silence, views, and real food" },
+    { tipo: "paragrafo", testo: "Drive a few kilometers inland and the landscape transforms. Longiano with its castle and art museums. Sogliano al Rubicone, home of the famous fossa cheese (aged in underground pits). Roncofreddo and its ridges dotted with vineyards. Here you'll find farmhouses with pools, restored country homes, apartments in stone villages. Distances are short: forty minutes and you're at the beach. But evenings bring silence and views stretching to the Adriatic. For families or anyone looking for a remote working rental in Romagna, the hills offer space and quiet you won't find on the coast." },
+    { tipo: "titoletto", testo: "Santarcangelo and the Marecchia Valley: the best of both worlds" },
+    { tipo: "paragrafo", testo: "Santarcangelo di Romagna is ten kilometers from Rimini but feels like another planet. Medieval old town, tuff caves, trattorias serving uncompromising Romagnol cuisine, cultural festivals lighting up summer evenings. A bit further, Verucchio dominates the Marecchia valley with its fortress. This area is perfect for those seeking a pet friendly rental in Romagna: many farmhouses and country properties welcome dogs and cats without fuss. And the sea remains within easy reach." },
+    { tipo: "titoletto", testo: "How to choose the right area" },
+    { tipo: "paragrafo", testo: "The choice depends on what you're looking for. Want the beach at your doorstep? Head to Cesenatico or Rimini. Prefer peace and authentic flavors? The hills between Cesena and the Marecchia Valley are your answer. Traveling with small children? Coastal apartments offer services and equipped beaches. Working remotely and need focus? A farmhouse in the hills with good Wi-Fi is ideal. The Emilia-Romagna Tourism portal (emiliaromagnaturismo.it) offers detailed itineraries to explore each area before you book." },
+    { tipo: "titoletto", testo: "Finding verified properties in Romagna" },
+    { tipo: "paragrafo", testo: "In an area this rich with options, the risk is getting lost among generic listings and photos that don't match reality. That's why starting from a curated selection makes sense. Romagna Short Stay gathers apartments, B&Bs, villas, and farmhouses between Cesena, Rimini, and the surrounding hills—all verified and bookable directly on Airbnb. A concrete starting point for anyone wanting to book a short-term rental in Romagna without surprises." },
+    { tipo: "titoletto", testo: "Explore the properties" },
+    { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
+    { tipo: "link", testo: "https://www.romagna-short-stay.com/#properties", etichetta: "Browse properties" },
+    { tipo: "titoletto", testo: "Read also" },
+    { tipo: "paragrafo", testo: "On the Romagna Short Stay blog you will find more articles about the territory, local experiences and practical tips for planning your stay in Romagna." },
+    { tipo: "link", testo: "https://www.romagna-short-stay.com/#blog" },
+    { tipo: "titoletto", testo: "Follow us" },
+    { tipo: "link", testo: "https://www.instagram.com/luceacollection_/" },
+  ],
+  attivo: true,
+},
 {
   id: "rab-geo-aeo-quality-rentals-romagna-2026-en",
   titolo: "Where to Find Quality Short-Term Rentals in Romagna: A Complete Guide to Coast, Hills and Villages",
