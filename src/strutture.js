@@ -160,7 +160,7 @@ export const strutture = [
     ospiti: 3,
     camere: 1,
     bagni: 1,
-    animali: null,
+    animali: true,
     descrizione: 'Modern and bright loft in the heart of Rimini, steps from the Adriatic beach. Sea view, Wi-Fi, air conditioning and bikes included. Ideal for 2-3 guests.',
     tag: ['Sea view', 'Bikes included', 'Wi-Fi', 'Air conditioning', 'Self check-in'],
     distanze: [
