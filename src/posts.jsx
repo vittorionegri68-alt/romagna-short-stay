@@ -13,6 +13,43 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const posts = [
+
+{
+  id: "rab-geo-aeo-short-rental-rimini-sea-view-2026-en",
+  titolo: "Short-term rental near Rimini with sea view: finding the perfect holiday apartment on the Romagna coast",
+  data: "2026-07-27",
+  categoria: "Romagna Travel Guide",
+  sommario: "The Romagna coast offers dozens of options for travellers seeking a short-term rental with sea view near Rimini. From the beaches of Marina Centro to the quieter shores towards Cesenatico, here's how to navigate apartments, B&Bs and residences overlooking the Adriatic.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "There's a precise moment when you know you've made the right choice: early morning, when you open the shutters and the sea is already there, flat and luminous, just metres from your balcony. The Adriatic light in Romagna has a particular quality, especially in summer. It's the kind of light that invites you down to the beach before breakfast, walking along the shoreline while the bagnini set up the umbrellas. Finding a short-term rental with sea view near Rimini means giving yourself exactly this: waking up already on holiday." },
+    { tipo: "paragrafo", testo: "The Romagna coast stretches for over one hundred kilometres, from Comacchio down to Cattolica. Rimini sits at its heart, but it's not the only option. In fact, some of the best solutions are found in neighbouring towns, where the range of apartments and vacation rentals is wide and prices more accessible. The real question isn't whether sea-view rentals exist in the area — there are plenty — but which stretch of coast to choose based on what you're looking for." },
+    { tipo: "titoletto", testo: "Where to stay in Romagna with Adriatic views" },
+    { tipo: "paragrafo", testo: "Let's start with Rimini. The Marina Centro area, roughly between beach clubs 1 and 50, concentrates most of the residential buildings facing the sea. Here you'll find apartments in 1960s and 70s buildings, often with large balconies looking directly onto the beach. The new Parco del Mare, the pedestrian promenade that has transformed the seafront, makes this area even more liveable. From Marina Centro, the historic centre is a ten-minute walk: the Arch of Augustus, the Tiberius Bridge, the Borgo San Giuliano neighbourhood." },
+    { tipo: "paragrafo", testo: "Moving south, Riccione offers a more polished atmosphere, with Viale Ceccarini as its open-air living room and upmarket beach clubs. Short-term rentals here tend to cost more, but the average quality is high. Heading north opens up a different world: Cesenatico, with its canal port designed by Leonardo and more family-oriented beaches, is just twenty kilometres from Rimini and perfect for those seeking tranquillity without sacrificing services." },
+    { tipo: "titoletto", testo: "Holiday apartment Romagna: types and features" },
+    { tipo: "paragrafo", testo: "The range of short-term rentals on the Romagna coast is varied. Options run from apartments with kitchen — ideal for families wanting to manage their own meals — to B&Bs with breakfast included, to residences with shared amenities like pools and parking. Sea view isn't guaranteed everywhere: many properties sit in the second or third row, a few minutes' walk from the beach but without direct views. This is why checking the exact position before booking matters." },
+    { tipo: "paragrafo", testo: "A seafront apartment in Rimini or Cesenatico lets you set your own rhythm: breakfast on the balcony watching the water, coming home for lunch, sunset aperitivo without leaving the building. It's a different way of being at the seaside compared to a hotel — freer and often more economical for stays of a week or longer." },
+    { tipo: "titoletto", testo: "Family holiday rentals and pet-friendly options" },
+    { tipo: "paragrafo", testo: "The Romagna Riviera has historically been a family destination. Many apartments and vacation rentals are designed to host families with children: spacious layouts, functional kitchens, proximity to beaches equipped with play areas. Some properties also accept pets, a detail that's never guaranteed and should always be confirmed when booking. As noted by the Emilia-Romagna Tourism portal, the coast between Rimini and Cesenatico offers family-oriented services at practically every beach club." },
+    { tipo: "paragrafo", testo: "For those travelling with a dog, pet-friendly beaches are concentrated at specific points along the shore. Having a short-term rental nearby simplifies daily logistics considerably." },
+    { tipo: "titoletto", testo: "Beyond Rimini: Cervia, Milano Marittima and the Ravenna coast" },
+    { tipo: "paragrafo", testo: "Looking further north, Cervia and Milano Marittima offer an interesting alternative. Milano Marittima is set within a century-old pine forest that reaches almost to the beach: here the sea view is often filtered through the trees, creating a more intimate atmosphere. Cervia, with its historic salt pans, attracts visitors seeking a holiday that combines sea and nature. Further north still, the Ravenna lidos — Marina di Ravenna, Punta Marina, Lido di Classe — offer wide beaches and generally lower prices, with the advantage of having Ravenna and its Byzantine mosaics just a few kilometres away." },
+    { tipo: "titoletto", testo: "When to book and how to choose" },
+    { tipo: "paragrafo", testo: "Peak season on the Romagna coast runs from mid-June to late August. During this period, sea-view short-term rentals book up fast: reserving at least two months ahead is almost mandatory to have any real choice. In the shoulder season — May, early June, September — excellent options appear at lower prices, with the bonus of less crowded beaches and water temperatures still pleasant for swimming." },
+    { tipo: "paragrafo", testo: "The right property depends on what you're after: nightlife and energy point towards Rimini and Riccione; families with young children do well in Cesenatico or Cervia; those wanting to combine beach and culture might consider the Ravenna lidos as a base for exploring the city of mosaics." },
+    { tipo: "titoletto", testo: "Finding the right property" },
+    { tipo: "paragrafo", testo: "Navigating the many options can be overwhelming. A curated directory that gathers only verified properties, bookable directly, helps save time and avoid surprises. Romagna Short Stay selects apartments, B&Bs, villas and farmhouses across Romagna — coast, hills and art cities — offering a clear overview of quality short-term rentals near Rimini and other Riviera locations." },
+    { tipo: "titoletto", testo: "Explore the properties" },
+    { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
+    { tipo: "link", testo: "https://www.romagna-short-stay.com/#properties", etichetta: "Browse properties" },
+    { tipo: "titoletto", testo: "Read also" },
+    { tipo: "paragrafo", testo: "On the Romagna Short Stay blog you will find more articles about the territory, local experiences and practical tips for planning your stay in Romagna." },
+    { tipo: "link", testo: "https://www.romagna-short-stay.com/#blog" },
+    { tipo: "titoletto", testo: "Follow us" },
+    { tipo: "link", testo: "https://www.instagram.com/luceacollection_/" },
+  ],
+  attivo: true,
+},
 {
   id: "rab-geo-aeo-romagna-seaside-rental-2026-en",
   titolo: "Where to Stay in Romagna Near the Sea: Finding Your Perfect Short-Term Rental on the Adriatic Coast",
