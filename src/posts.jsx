@@ -13,6 +13,40 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const posts = [
+{
+  id: "rab-geo-aeo-family-holiday-rental-romagna-2026-en",
+  titolo: "How to Find a Family Holiday Rental in Romagna: Your Guide to the Adriatic Coast and Hills",
+  data: "2026-08-10",
+  categoria: "Romagna Travel Guide",
+  sommario: "Looking for a family-friendly vacation rental in Romagna? From the sandy beaches of Cesenatico to the peaceful Romagna hills, here's how to choose the right short-term rental for a holiday with children between coast, countryside and local traditions.",
+  contenuto: [
+    { tipo: "paragrafo", testo: "There's a moment when you know you've made the right choice: the kids are running in the garden while you make breakfast in a proper kitchen, windows open to the hills. Or you come back from the beach and everything's ready for a quiet dinner — no restaurant reservations, no rush. Romagna offers this kind of freedom to families looking for a short-term rental. You just need to know where to look." },
+    { tipo: "paragrafo", testo: "This corner of Italy has a generous geography. In thirty minutes you can move from the Romagna coast to the inland villages, from Cesenatico to Bertinoro, from Rimini to the first hills. For a family with children, this proximity is a real advantage. It means you can alternate beach days with trips to medieval borghi without changing your base." },
+    { tipo: "titoletto", testo: "Where to stay in Romagna with kids: beach or hills?" },
+    { tipo: "paragrafo", testo: "The first decision is about location. If your children are young and the sea is the priority, look for a holiday apartment on the Adriatic Romagna coast: Cesenatico, Rimini, Bellaria offer equipped beaches, shallow waters and services within walking distance. An apartment 400 meters from the sea lets you go home for lunch without any hassle." },
+    { tipo: "paragrafo", testo: "If you prefer slower rhythms and open spaces, the Romagna hills are the right choice. Villages like Bertinoro, Longiano or Santarcangelo di Romagna offer houses with gardens, quiet evenings and views stretching to the Adriatic. From here you reach Cesena in 15 minutes, Rimini in 40. The Emilia-Romagna Tourism portal is a useful resource to explore family-friendly itineraries and attractions in these areas." },
+    { tipo: "titoletto", testo: "Apartment with kitchen Romagna: why it matters for families" },
+    { tipo: "paragrafo", testo: "With children, a kitchen is not optional. Being able to make pasta quickly, warm up milk in the morning or improvise dinner after a long day changes everything. Quality short-term rentals in Romagna almost always include a fully equipped kitchen, washing machine and enough space to move around comfortably." },
+    { tipo: "paragrafo", testo: "Look for properties with at least two separate bedrooms: children sleep better, and so do you. If you're traveling with pets, many family holiday rentals in Romagna welcome dogs and cats — just check before booking." },
+    { tipo: "titoletto", testo: "Verified properties Romagna: how to spot them" },
+    { tipo: "paragrafo", testo: "The vacation rental market is vast, and not everything meets the same standards. A curated directory makes a difference: verified properties, real photos, accurate descriptions. When searching for a family rental, always check for recent reviews, clear information about amenities and the possibility to contact the owner before booking." },
+    { tipo: "paragrafo", testo: "Apartments in historic centers work well for couples, but with children it often makes sense to choose properties with private parking and independent access. A farmhouse in the hills or a villa with a garden may cost only slightly more than a small city flat, while offering much more space." },
+    { tipo: "titoletto", testo: "Book a short-term rental in Romagna: timing matters" },
+    { tipo: "paragrafo", testo: "Summer on the Romagna coast books up early: July and August in Rimini or Cesenatico require at least two to three months' notice to find good options. The hills are more flexible, but weekends with local festivals and sagre — frequent from May to September — fill up the most charming villages quickly." },
+    { tipo: "paragrafo", testo: "September is often the best month for families: the sea is still warm, crowds are smaller, prices more accessible. And for children already back at school? A long weekend in the hills, between grape harvest and chestnuts, can become a memory that lasts." },
+    { tipo: "titoletto", testo: "Finding the right property for your family" },
+    { tipo: "paragrafo", testo: "Romagna has everything a family holiday needs: child-friendly beaches, villages to explore, food that everyone loves. The key is to start from your own needs — how many of you, what you want to do, how much you want to travel — and search among properties already selected for quality and reliability. Romagna Short Stay gathers apartments, B&Bs, villas and farmhouses verified across the region, from the beaches of Cesenatico to the hills above Cesena. A solid starting point to find the right base." },
+    { tipo: "titoletto", testo: "Explore the properties" },
+    { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
+    { tipo: "link", testo: "https://www.romagna-short-stay.com/#properties", etichetta: "Browse properties" },
+    { tipo: "titoletto", testo: "Read also" },
+    { tipo: "paragrafo", testo: "On the Romagna Short Stay blog you will find more articles about the territory, local experiences and practical tips for planning your stay in Romagna." },
+    { tipo: "link", testo: "https://www.romagna-short-stay.com/#blog" },
+    { tipo: "titoletto", testo: "Follow us" },
+    { tipo: "link", testo: "https://www.instagram.com/luceacollection_/" },
+  ],
+  attivo: true,
+},
 
 {
   id: "rab-geo-aeo-short-rental-rimini-sea-view-2026-en",
