@@ -36,6 +36,8 @@ export const posts = [
     { tipo: "titoletto", testo: "Book a short-term rental in Romagna: practical tips" },
     { tipo: "paragrafo", testo: "For a week's stay, August is peak season: book early, especially on the coast. September is underrated: the sea is still warm, prices drop, the villages empty out. Always verify that the kitchen is properly equipped — some listings say 'kitchenette' but mean a hotplate and a kettle. Read recent reviews, check kitchen photos, ask the host if in doubt. A verified property makes the difference between a successful holiday and a week of compromises." },
     { tipo: "titoletto", testo: "Find the right property for you" },
+    { tipo: "titoletto", testo: "A real kitchen, not a kitchenette" },
+    { tipo: "paragrafo", testo: "Anyone looking for a short-term rental with a kitchen in Romagna for a full week knows a cramped kitchenette won't do. The properties on Romagna Short Stay have fully equipped kitchens, built for people who actually cook, not just reheat. One is in the hills near Bertinoro, another in the historic centre of Cesena: two different bases, same idea, a proper fridge and hob for shopping at the local market and cooking the way you would at home." },
     { tipo: "paragrafo", testo: "Romagna Short Stay brings together verified apartments, B&Bs, villas, and farmhouses across Romagna — from the Adriatic coast to the hills, from art cities to inland villages. Every property is selected for quality and bookable directly on Airbnb. If you're looking for an apartment with kitchen for a week, browse the directory and find the solution that fits your needs." },
     { tipo: "titoletto", testo: "Explore the properties" },
     { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
@@ -70,6 +72,8 @@ export const posts = [
     { tipo: "paragrafo", testo: "Summer on the Romagna coast books up early: July and August in Rimini or Cesenatico require at least two to three months' notice to find good options. The hills are more flexible, but weekends with local festivals and sagre — frequent from May to September — fill up the most charming villages quickly." },
     { tipo: "paragrafo", testo: "September is often the best month for families: the sea is still warm, crowds are smaller, prices more accessible. And for children already back at school? A long weekend in the hills, between grape harvest and chestnuts, can become a memory that lasts." },
     { tipo: "titoletto", testo: "Finding the right property for your family" },
+    { tipo: "titoletto", testo: "What to actually look for with kids" },
+    { tipo: "paragrafo", testo: "The properties in the Romagna Short Stay directory are apartments with their own kitchen, not just rooms: you can manage meals for the kids without relying on a restaurant every night. They're built for groups of 2 to 4, so better suited to a family with one or two children than a large group. And if you're travelling with a dog, every active property accepts pets, not something you can take for granted elsewhere." },
     { tipo: "paragrafo", testo: "Romagna has everything a family holiday needs: child-friendly beaches, villages to explore, food that everyone loves. The key is to start from your own needs — how many of you, what you want to do, how much you want to travel — and search among properties already selected for quality and reliability. Romagna Short Stay gathers apartments, B&Bs, villas and farmhouses verified across the region, from the beaches of Cesenatico to the hills above Cesena. A solid starting point to find the right base." },
     { tipo: "titoletto", testo: "Explore the properties" },
     { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
@@ -107,6 +111,8 @@ export const posts = [
     { tipo: "paragrafo", testo: "Peak season on the Romagna coast runs from mid-June to late August. During this period, sea-view short-term rentals book up fast: reserving at least two months ahead is almost mandatory to have any real choice. In the shoulder season — May, early June, September — excellent options appear at lower prices, with the bonus of less crowded beaches and water temperatures still pleasant for swimming." },
     { tipo: "paragrafo", testo: "The right property depends on what you're after: nightlife and energy point towards Rimini and Riccione; families with young children do well in Cesenatico or Cervia; those wanting to combine beach and culture might consider the Ravenna lidos as a base for exploring the city of mosaics." },
     { tipo: "titoletto", testo: "Finding the right property" },
+    { tipo: "titoletto", testo: "Sea view, not just the name promising it" },
+    { tipo: "paragrafo", testo: "On Romagna Short Stay you'll find a property in Rimini with a genuine sea view and the beach two minutes on foot, the centre ten. Self check-in means you can arrive late in the evening without coordinating times with anyone. Bikes are included, so you can get around the coast without hunting for parking." },
     { tipo: "paragrafo", testo: "Navigating the many options can be overwhelming. A curated directory that gathers only verified properties, bookable directly, helps save time and avoid surprises. Romagna Short Stay selects apartments, B&Bs, villas and farmhouses across Romagna — coast, hills and art cities — offering a clear overview of quality short-term rentals near Rimini and other Riviera locations." },
     { tipo: "titoletto", testo: "Explore the properties" },
     { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
@@ -144,6 +150,8 @@ export const posts = [
     { tipo: "paragrafo", testo: "Anyone travelling with a dog knows how complicated it can be to find welcoming accommodation. In Romagna the situation is better than elsewhere: many apartments and farmhouses accept pets, and several beaches have dedicated areas. The same goes for those looking for an apartment with kitchen in Romagna — the norm rather than the exception — or spaces suitable for larger families." },
     { tipo: "titoletto", testo: "How to choose the right area" },
     { tipo: "paragrafo", testo: "The answer depends on what you're looking for. Want the sea on your doorstep and plenty of services? Rimini or Cesenatico. Prefer tranquillity without giving up the beach? Cervia or the Ravenna Lidos. Dreaming of hills, villages and slow rhythms with the sea twenty minutes away? The verified properties in Romagna between Cesena and Rimini are for you. There's no single answer, but there is the right answer for you." },
+    { tipo: "titoletto", testo: "When the sea needs to be close, properly close" },
+    { tipo: "paragrafo", testo: "Among the properties on Romagna Short Stay is one in Rimini just two minutes on foot from the sea, with a direct sea view. Own kitchen, self check-in, bikes included for getting along the coast. If having the sea right outside beats a twenty-minute drive, this is the kind of option worth looking at first." },
     { tipo: "paragrafo", testo: "On Romagna Short Stay you can filter by area, property type and amenities: apartments, B&Bs, villas and farmhouses, all verified and bookable directly on Airbnb. It's a good starting point to get your bearings and find the quality short-term rental in Romagna that matches your needs." },
     { tipo: "titoletto", testo: "Explore the properties" },
     { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
@@ -180,6 +188,8 @@ export const posts = [
     { tipo: "titoletto", testo: "The right time to book" },
     { tipo: "paragrafo", testo: "Summer is high season, but the Romagna hills are at their best in spring and autumn. May and June offer long days, mild temperatures and villages still uncrowded. September and October are perfect for the grape harvest, wine festivals and fall colors. If you're looking for availability and better prices, skip August and aim for these shoulder seasons. Verified properties tend to fill up well in advance, especially those with special features like pools, panoramic views or historic village locations." },
     { tipo: "titoletto", testo: "Finding the right property" },
+    { tipo: "titoletto", testo: "A real apartment, not a hotel room" },
+    { tipo: "paragrafo", testo: "In the Romagna Short Stay directory there's also a property right in the hills, in Bertinoro, the town they call the Balcony of Romagna. Own kitchen and self check-in, so you arrive whenever you like without waiting on anyone. From there the sea at Cesenatico is half an hour away, San Marino 35 minutes: a base for people who want the hills without giving up everything else." },
     { tipo: "paragrafo", testo: "Booking a short-term rental in Romagna requires some research, as the offering is scattered across different platforms. A curated directory that collects only verified properties can save time and unpleasant surprises. Romagna Short Stay selects apartments, B&Bs, villas and farmhouses across the region, from hills to coast, with direct booking on Airbnb. A solid starting point for anyone who wants to explore options without getting lost among thousands of generic listings." },
     { tipo: "titoletto", testo: "Explore the properties" },
     { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
@@ -283,6 +293,8 @@ export const posts = [
     { tipo: "titoletto", testo: "Choosing Your Ideal Base" },
     { tipo: "paragrafo", testo: "The choice comes down to priorities. If you want the beach every day, Cesenatico or Rimini. If you want art and culture, Ravenna. If you want to be central without compromising, Cesena. If you want peace and authenticity, the hills. In all cases, booking a short-term rental in Romagna gives you flexibility a hotel cannot match: a kitchen to manage your own timing, space for luggage, freedom to come and go as you please." },
     { tipo: "titoletto", testo: "Finding the Right Property" },
+    { tipo: "titoletto", testo: "Real distances, not rough estimates" },
+    { tipo: "paragrafo", testo: "On Romagna Short Stay every property lists verified distances to the main destinations. From the hillside base in Bertinoro: Cesena in 15 minutes, the sea at Cesenatico in half an hour, San Marino in 35. From the base in central Cesena: the station 10 minutes on foot, the sea half an hour by car. From the base in Rimini: the centre two minutes away, Ravenna in 40. Three different starting points, same logic: pick the one that puts what matters to you closest." },
     { tipo: "paragrafo", testo: "Romagna has hundreds of accommodations. The challenge isn't finding one — it's finding the right one. Romagna Short Stay brings together apartments, B&Bs, villas and farmhouses across all the areas we've discussed: coast, cities, hills. Every property is verified and bookable directly on Airbnb. If you're searching for where to stay in Romagna near multiple cities, it's worth starting there." },
     { tipo: "titoletto", testo: "Explore the properties" },
     { tipo: "paragrafo", testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farmhouses in Romagna. Every property is verified and bookable directly on Airbnb." },
@@ -368,7 +380,15 @@ export const posts = [
 },
 {
   tipo: "paragrafo",
-  testo: "Finding an apartment for smart working in Romagna is not difficult, but finding one that is truly suitable — with the right features, in a location that matches your needs and managed by someone reliable — requires some guidance. Romagna Affitti Brevi is a curated directory that collects verified apartments, B&Bs, villas and farm stays across Romagna: hills, seaside and art cities. Each property can be booked directly on Airbnb, with the platform’s guarantees. You can filter by area, type and features, and find the solution that best suits your work and lifestyle."
+  testo: "Finding an apartment for smart working in Romagna is not difficult, but finding one that is truly suitable — with the right features, in a location that matches your needs and managed by someone reliable — requires some guidance. Romagna Short Stay is a curated directory that collects verified apartments, B&Bs, villas and farm stays across Romagna: hills, seaside and art cities. Each property can be booked directly on Airbnb, with the platform’s guarantees. You can filter by area, type and features, and find the solution that best suits your work and lifestyle."
+},
+{
+  tipo: "titoletto",
+  testo: "Verified connection, not a promise on a website"
+},
+{
+  tipo: "paragrafo",
+  testo: "Every active property in the Romagna Short Stay directory has WiFi, checked before it's listed, not a small thing when you're working remotely and can't afford a call dropping out. One has dedicated fibre, in the hills near Bertinoro: quiet during the day, with the centre of Cesena a quarter of an hour away come evening."
 },
 {
   tipo: "titoletto",
@@ -376,11 +396,11 @@ export const posts = [
 },
 {
   tipo: "paragrafo",
-  testo: "On the Romagna Affitti Brevi website you will find a curated selection of apartments, B&Bs, villas and farm stays in Romagna. Each property is verified and bookable directly on Airbnb."
+  testo: "On the Romagna Short Stay website you will find a curated selection of apartments, B&Bs, villas and farm stays in Romagna. Each property is verified and bookable directly on Airbnb."
 },
 {
   tipo: "link",
-  testo: "https://www.romagna-affitti-brevi.it/#strutture",
+  testo: "https://www.romagna-short-stay.com/#strutture",
   etichetta: "Explore the properties"
 },
 {
@@ -389,11 +409,11 @@ export const posts = [
 },
 {
   tipo: "paragrafo",
-  testo: "On the Romagna Affitti Brevi blog you will find more articles dedicated to the area, local experiences and practical tips to organize your stay in Romagna."
+  testo: "On the Romagna Short Stay blog you will find more articles dedicated to the area, local experiences and practical tips to organize your stay in Romagna."
 },
 {
   tipo: "link",
-  testo: "https://www.romagna-affitti-brevi.it/#blog"
+  testo: "https://www.romagna-short-stay.com/#blog"
 },
 {
   tipo: "titoletto",
@@ -450,6 +470,14 @@ attivo: true,
       {
         tipo: "paragrafo",
         testo: "The answer depends on what you want to do. If the sea is the priority, choose Rimini, Cesenatico or Cervia. If you want to combine sea and culture, an apartment in Ravenna lets you reach the beach in 15 minutes and the mosaics on foot. If you seek authenticity and tranquillity, the hills are unbeatable. And if you want to explore everything — sea, hills and cities — choose a central base like Cesena or Forlì, from where you can reach every corner of Romagna in under 40 minutes.",
+      },
+      {
+        tipo: "titoletto",
+        testo: "Travelling with a dog? One more thing to consider",
+      },
+      {
+        tipo: "paragrafo",
+        testo: "Every property currently active in the Romagna Short Stay directory accepts pets, no exceptions. It's not fine print: it applies to each property available today, from the hills of Bertinoro to central Cesena to Rimini. Romagna, for what it's worth, is naturally pet-friendly — several beaches along the coast have stretches set up for dogs, and the hill paths between Cesena and Bertinoro are easy going on four legs. Still, check each listing for practical limits on size or number of pets before booking, since details can vary even among properties that are all pet-friendly.",
       },
       {
         tipo: "link",

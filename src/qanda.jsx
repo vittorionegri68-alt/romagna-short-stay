@@ -49,7 +49,7 @@ export const qanda = [
   {
     id: "holiday-homes-pets-romagna",
     domanda: "Holiday homes in Romagna that accept pets?",
-    risposta: "Several properties in the Romagna Short Stay directory accept pets. Check individual listings to verify each property's pet policy. Romagna is a pet-friendly destination: dog-friendly beaches on the coast and hill trails accessible to four-legged companions.",
+    risposta: "Every property currently active in the Romagna Short Stay directory accepts pets. Romagna is a pet-friendly destination: some beaches along the coast have stretches set up for dogs, and the hills between Cesena and Bertinoro offer trails suited to walks with four-legged companions. Check each listing for practical limits (size, number of pets) before booking.",
   },
   {
     id: "apartments-remote-work-romagna",
