@@ -389,10 +389,40 @@ function FilterBar({ filter, setFilter }) {
 }
 
 // ── Blog Section ──────────────────────────────────────────────────────────────
+function slugify(id) {
+  return String(id)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function BlogSection() {
   const [selected, setSelected] = useState(null);
+  const [shared, setShared] = useState(null);
   const sectionRef = useRef(null);
   const published = posts.filter(p => p.attivo);
+
+  async function condividi(post) {
+    const url = `https://www.romagna-short-stay.com/post/${slugify(post.id)}.html`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: post.titolo, text: `${post.sommario}\n\n${url}` });
+        return;
+      } catch {
+        return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setShared(post.id);
+      setTimeout(() => setShared(null), 2000);
+    } catch {
+      window.prompt("Copy the article link:", url);
+    }
+  }
 
   function chiudi() {
     setSelected(null);
@@ -426,14 +456,24 @@ function BlogSection() {
 
         {selected ? (
           <div style={{ maxWidth: 720, margin: "0 auto" }}>
-            <button onClick={chiudi}
-              style={{ background: "transparent", border: "none", color: C.gold,
-                fontFamily: "'DM Sans',sans-serif", fontSize: "0.8rem",
-                letterSpacing: "0.08em", textTransform: "uppercase",
-                cursor: "pointer", marginBottom: "2rem", padding: 0,
-                display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              ← Back to articles
-            </button>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem", marginBottom: "2rem", flexWrap: "wrap" }}>
+              <button onClick={chiudi}
+                style={{ background: "transparent", border: "none", color: C.gold,
+                  fontFamily: "'DM Sans',sans-serif", fontSize: "0.8rem",
+                  letterSpacing: "0.08em", textTransform: "uppercase",
+                  cursor: "pointer", padding: 0,
+                  display: "flex", alignItems: "center", gap: "0.4rem" }}>
+                ← Back to articles
+              </button>
+              <button onClick={() => condividi(selected)}
+                style={{ background: "transparent", border: "none", color: C.gold,
+                  fontFamily: "'DM Sans',sans-serif", fontSize: "0.8rem",
+                  letterSpacing: "0.08em", textTransform: "uppercase",
+                  cursor: "pointer", padding: 0,
+                  display: "flex", alignItems: "center", gap: "0.4rem" }}>
+                {shared === selected.id ? "Link copied ✓" : "Share ↗"}
+              </button>
+            </div>
             <span style={{ fontSize: "0.65rem", letterSpacing: "0.2em", color: C.textSoft,
               textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }}>
               {selected.categoria} · {selected.data}
@@ -653,6 +693,12 @@ function Footer() {
                 onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.4)"}
               >{label}</a>
             ))}
+            <a href="https://www.instagram.com/luceacollection_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              style={{ display: "flex", alignItems: "center", color: "rgba(255,255,255,0.4)", transition: "color 0.2s" }}
+              onMouseEnter={e => e.currentTarget.style.color = C.gold}
+              onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.4)"}>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" /></svg>
+            </a>
           </div>
         </div>
         {/* Static NAP for Wave 1 crawlers */}
