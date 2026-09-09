@@ -52,18 +52,33 @@ function isBlogHomeLink(b) {
 // etichetta (quindi renderizzato come URL grezzo): qui viene rimosso e
 // reinserito con etichetta corretta, stessa correzione già applicata su
 // Casa Cavour.
+// The "Read also" links (2 per article, to genuinely related articles, with
+// a short label on the topic covered) are now hand-written directly in
+// posts.jsx, right after the "Read also" paragraph. This script no longer
+// generates them: it passes them through unchanged, identical both here and
+// in the React live rendering.
+//
+// Safety net: if an article has no link after "Read also" (doesn't happen
+// today for any of the 10, but could for a future new article), a single
+// "All articles" button toward #blog is inserted. Any #blog link written by
+// mistake elsewhere in the content is removed regardless, to avoid
+// duplicates with this fallback.
+const FALLBACK_ALL_ARTICLES = { tipo: "link", testo: `${SITE_URL}/#blog`, etichetta: "All articles" };
+
 function buildContenuto(post) {
   const filtered = post.contenuto.filter((b) => !isSocialBlock(b) && !isBlogHomeLink(b));
-  const linkBlogHome = { tipo: "link", testo: `${SITE_URL}/#blog`, etichetta: "Read more articles on the blog" };
 
   const idx = filtered.findIndex((b) => b.tipo === "titoletto" && b.testo.trim().toLowerCase() === "read also");
   if (idx === -1) {
-    filtered.push(linkBlogHome);
+    filtered.push(FALLBACK_ALL_ARTICLES);
     return filtered;
   }
-  let insertAt = idx + 1;
-  if (filtered[insertAt] && filtered[insertAt].tipo === "paragrafo") insertAt++;
-  filtered.splice(insertAt, 0, linkBlogHome);
+  let cursor = idx + 1;
+  if (filtered[cursor] && filtered[cursor].tipo === "paragrafo") cursor++;
+  const hasRelatedLinks = filtered[cursor] && filtered[cursor].tipo === "link";
+  if (!hasRelatedLinks) {
+    filtered.splice(cursor, 0, FALLBACK_ALL_ARTICLES);
+  }
   return filtered;
 }
 
