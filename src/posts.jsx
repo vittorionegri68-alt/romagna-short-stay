@@ -446,7 +446,7 @@ export const posts = [
 },
 {
   tipo: "link",
-  testo: "https://www.romagna-short-stay.com/#strutture",
+  testo: "https://www.romagna-short-stay.com/#properties",
   etichetta: "Explore the properties"
 },
 {
