@@ -145,7 +145,7 @@ async function main() {
 
   const generated = [
     START_MARKER,
-    `    <h2>Blog — Guides and stories from Romagna</h2>`,
+    `    <h2>Blog: Guides and stories from Romagna</h2>`,
     articlesHtml,
     END_MARKER,
   ].join("\n");

@@ -262,7 +262,7 @@ ${bodyBlocks}
           </a>
         </div>
       </div>
-      <footer><a href="${SITE_URL}/">Romagna Short Stay — Back to home</a></footer>
+      <footer><a href="${SITE_URL}/">Romagna Short Stay. Back to home</a></footer>
     </div>
     <script>
       (function () {
