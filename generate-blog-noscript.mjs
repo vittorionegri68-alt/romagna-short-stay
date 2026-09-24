@@ -17,6 +17,12 @@
 // resta sempre sincronizzato con posts.jsx, sia per gli articoli esistenti
 // che per ogni nuovo articolo pubblicato in futuro. Non richiede alcun passo
 // manuale aggiuntivo.
+//
+// v2 (24/09/2026): i link interni [[etichetta|id]] dentro i paragrafi vengono
+// risolti in link <a> verso la pagina statica dell'articolo (/post/{slug}.html),
+// con la stessa regex e la stessa logica slug di generate-blog-pages.mjs.
+// Prima venivano pubblicati in chiaro nel noscript. Un id inesistente o
+// disattivato blocca la build, come in generate-blog-pages.mjs.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { readFileSync, writeFileSync, copyFileSync, unlinkSync } from "node:fs";
@@ -27,6 +33,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = __dirname;
 const POSTS_PATH = join(ROOT, "src", "posts.jsx");
 const INDEX_PATH = join(ROOT, "index.html");
+const SITE_URL = "https://www.romagna-short-stay.com";
 
 const START_MARKER = "<!-- BLOG-STATIC-START (generato automaticamente da generate-blog-noscript.mjs, non modificare a mano) -->";
 const END_MARKER = "<!-- BLOG-STATIC-END -->";
@@ -38,6 +45,41 @@ function escapeHtml(str) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+// Stessa normalizzazione di generate-blog-pages.mjs: gli slug devono
+// coincidere con i nomi file reali in public/post/.
+function slugify(id) {
+  return String(id)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+const INTERNAL_LINK_RE = /\[\[([^\]|]+)\|([^\]]+)\]\]/g;
+
+function renderParagraphWithLinks(testo, idToSlug) {
+  let result = "";
+  let lastIndex = 0;
+  let match;
+  INTERNAL_LINK_RE.lastIndex = 0;
+  while ((match = INTERNAL_LINK_RE.exec(testo)) !== null) {
+    const [full, label, targetId] = match;
+    result += escapeHtml(testo.slice(lastIndex, match.index));
+    const slug = idToSlug.get(targetId);
+    if (!slug) {
+      throw new Error(
+        `generate-blog-noscript: link interno verso id "${targetId}" non trovato tra gli articoli attivi (etichetta: "${label}"). Correggere l'id nel file dei post.`
+      );
+    }
+    result += `<a href="${escapeHtml(`${SITE_URL}/post/${slug}.html`)}">${escapeHtml(label)}</a>`;
+    lastIndex = match.index + full.length;
+  }
+  result += escapeHtml(testo.slice(lastIndex));
+  return result;
 }
 
 function formatDate(iso) {
@@ -62,10 +104,10 @@ async function loadPosts() {
   }
 }
 
-function renderArticle(post) {
+function renderArticle(post, idToSlug) {
   const blocks = post.contenuto
     .map((b) => {
-      if (b.tipo === "paragrafo") return `      <p>${escapeHtml(b.testo)}</p>`;
+      if (b.tipo === "paragrafo") return `      <p>${renderParagraphWithLinks(b.testo, idToSlug)}</p>`;
       if (b.tipo === "titoletto") return `      <h4>${escapeHtml(b.testo)}</h4>`;
       // "link" e altri elementi di navigazione/CTA non sono contenuto
       // testuale utile per l'estrazione GEO/AEO: vengono omessi di proposito.
@@ -96,7 +138,10 @@ async function main() {
     return;
   }
 
-  const articlesHtml = visibili.map(renderArticle).join("\n\n");
+  // Mappa id -> slug su tutti gli articoli attivi (come generate-blog-pages.mjs).
+  const idToSlug = new Map(visibili.map((p) => [p.id, slugify(p.id)]));
+
+  const articlesHtml = visibili.map((p) => renderArticle(p, idToSlug)).join("\n\n");
 
   const generated = [
     START_MARKER,
