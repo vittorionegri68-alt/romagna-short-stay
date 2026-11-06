@@ -432,6 +432,15 @@ function BlogSection() {
   const [selected, setSelected] = useState(null);
   const [shared, setShared] = useState(null);
   const sectionRef = useRef(null);
+  // GA4: l'apertura di un articolo nella home vale come visita alla sua pagina /post/
+  useEffect(() => {
+    if (!selected || typeof window.gtag !== "function") return;
+    const post = selected;
+    window.gtag("event", "page_view", {
+      page_location: `https://www.romagna-short-stay.com/post/${slugify(post.id)}.html`,
+      page_title: `${post.titolo} | Romagna Short Stay`,
+    });
+  }, [selected]);
   const published = posts.filter(p => p.attivo);
 
   async function condividi(post) {

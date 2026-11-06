@@ -36,6 +36,20 @@ const POSTS_PATH = join(ROOT, "src", "posts.jsx");
 const OUT_DIR = join(ROOT, "public", "post");
 
 const SITE_URL = "https://www.romagna-short-stay.com";
+
+// Tracciamento GA4: copiato da index.html (dal tag gtag fino a "<!-- /tracciamento GA4 -->"),
+// così le pagine /post/ registrano visite, referral AI e download con la stessa configurazione della home.
+function readGaTracking() {
+  const html = readFileSync(join(ROOT, "index.html"), "utf8");
+  const start = html.indexOf('<script async src="https://www.googletagmanager.com/gtag/js');
+  const END_MARKER = "<!-- /tracciamento GA4 -->";
+  const end = html.indexOf(END_MARKER);
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error("generate-blog-pages: blocco di tracciamento GA4 non trovato in index.html");
+  }
+  return html.slice(start, end + END_MARKER.length);
+}
+const GA_TRACKING = readGaTracking();
 const INSTAGRAM_URL = "https://www.instagram.com/luceacollection_/";
 
 function isSocialBlock(b) {
@@ -242,6 +256,7 @@ function renderPage(post, idToSlug) {
       footer{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);text-align:center;}
       footer a{color:var(--gold);text-decoration:none;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;}
     </style>
+    ${GA_TRACKING}
   </head>
   <body>
     <div class="wrap">
