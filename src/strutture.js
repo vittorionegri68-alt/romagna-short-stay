@@ -63,7 +63,7 @@ export const strutture = [
     ],
     rating: 4.5,
     recensioni: 10,
-    prezzo_da: 85,
+    prezzo_da: 95,
     url: "https://en.casa-cavour.com/",
     airbnb: "https://airbnb.com/h/casacavour-bertinoro",
     attivo: true,
