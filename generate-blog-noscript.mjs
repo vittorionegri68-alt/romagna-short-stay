@@ -2,8 +2,8 @@
 // generate-blog-noscript.mjs
 //
 // Genera automaticamente il testo integrale degli articoli del blog (letti da
-// src/posts.jsx) e li inserisce nel blocco statico <noscript> di index.html,
-// tra i marcatori BLOG-STATIC-START / BLOG-STATIC-END.
+// src/posts.jsx) e li inserisce nel blocco statico dentro <div id="root"> di
+// index.html, tra i marcatori BLOG-STATIC-START / BLOG-STATIC-END.
 //
 // Perché esiste: il blog è renderizzato solo lato client (React, stato
 // "aperto"), quindi i crawler che non eseguono JavaScript (molti crawler AI:
@@ -12,6 +12,14 @@
 // qualunque crawler, seguendo lo stesso pattern già validato su Casa Cavour
 // (chat Casa-Cavour #16, 09/07/2026) e già usato per le FAQ in questo stesso
 // index.html.
+//
+// v3 (19/11/2026, audit AI'm by VNS): il blocco statico viveva dentro
+// <noscript>, che Bing legge solo in modo selettivo e che i crawler AI non
+// usano in modo verificato: risultato, 0 articoli indicizzati su Google,
+// Bing e Brave nonostante il contenuto fosse pronto. Spostato dentro
+// <div id="root">: React lo sostituisce al mount (nessun cambiamento visibile
+// per chi ha JavaScript), ma ora è nel DOM iniziale per chiunque non lo
+// esegua.
 //
 // Si esegue automaticamente ad ogni build (vedi package.json: "build") quindi
 // resta sempre sincronizzato con posts.jsx, sia per gli articoli esistenti
@@ -162,15 +170,15 @@ async function main() {
   } else {
     // Prima esecuzione: inserisce il blocco appena prima della chiusura di </article> finale del noscript.
     // Tollerante agli spazi di indentazione reali del file.
-    const closingRe = /(\s*)<\/article>(\s*)<\/main>(\s*)<\/noscript>/;
+    const closingRe = /(\s*)<\/article>(\s*)<\/main>(\s*)<\/div>/;
     const match = html.match(closingRe);
     if (!match) {
       throw new Error(
-        "generate-blog-noscript: non trovo il punto di inserimento atteso in index.html (chiusura </article></main></noscript>). Controllare manualmente la struttura del file."
+        "generate-blog-noscript: non trovo il punto di inserimento atteso in index.html (chiusura </article></main></div> dentro #root). Controllare manualmente la struttura del file."
       );
     }
     const [full, ws1, ws2, ws3] = match;
-    const replacement = `${ws1}</article>\n\n${generated}${ws2}</main>${ws3}</noscript>`;
+    const replacement = `${ws1}</article>\n\n${generated}${ws2}</main>${ws3}</div>`;
     newHtml = html.slice(0, match.index) + replacement + html.slice(match.index + full.length);
   }
 
