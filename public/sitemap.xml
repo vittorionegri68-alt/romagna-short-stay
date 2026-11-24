@@ -3,10 +3,17 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.romagna-short-stay.com/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.romagna-short-stay.com/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.romagna-affitti-brevi.it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.romagna-affitti-brevi.it/"/>
+  </url>
+  <url>
+    <loc>https://www.romagna-short-stay.com/about.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.romagna-short-stay.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.romagna-affitti-brevi.it/chi-siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.romagna-short-stay.com/about.html"/>
   </url>
   <url>
     <loc>https://www.romagna-short-stay.com/post/rab-geo-aeo-pet-friendly-rental-romagna-2026-en.html</loc>

@@ -63,6 +63,10 @@ function renderUrl(loc, lastmod, alternates) {
     .join("\n");
 }
 
+// Pagina statica indicizzabile servita da public/: va in sitemap come la home.
+const STATIC_PAGE = "/about.html";
+const ALT_STATIC_PAGE = "/chi-siamo.html";
+
 async function main() {
   const posts = await loadPosts();
   const visibili = posts.filter((p) => p.attivo);
@@ -72,6 +76,11 @@ async function main() {
       { lang: LANG, href: `${SITE_URL}/` },
       { lang: ALT_LANG, href: `${ALT_SITE_URL}/` },
       { lang: "x-default", href: `${ALT_SITE_URL}/` },
+    ]),
+    renderUrl(`${SITE_URL}${STATIC_PAGE}`, todayISO(), [
+      { lang: LANG, href: `${SITE_URL}${STATIC_PAGE}` },
+      { lang: ALT_LANG, href: `${ALT_SITE_URL}${ALT_STATIC_PAGE}` },
+      { lang: "x-default", href: `${SITE_URL}${STATIC_PAGE}` },
     ]),
     ...visibili.map((p) => renderUrl(`${SITE_URL}/post/${slugify(p.id)}.html`, p.data)),
   ];
@@ -87,7 +96,7 @@ async function main() {
 
   writeFileSync(SITEMAP_PATH, xml, "utf8");
   console.log(
-    `generate-sitemap: scritti ${entries.length} URL in public/sitemap.xml (1 homepage + ${visibili.length} articoli)`
+    `generate-sitemap: scritti ${entries.length} URL in public/sitemap.xml (1 homepage + 1 pagina statica + ${visibili.length} articoli)`
   );
 }
 

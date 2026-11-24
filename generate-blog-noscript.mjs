@@ -46,6 +46,11 @@ const SITE_URL = "https://www.romagna-short-stay.com";
 const START_MARKER = "<!-- BLOG-STATIC-START (generato automaticamente da generate-blog-noscript.mjs, non modificare a mano) -->";
 const END_MARKER = "<!-- BLOG-STATIC-END -->";
 
+// Link dalla scheda articolo alla sua pagina statica in public/post/.
+// Senza questo nessun crawler raggiunge gli articoli: nel DOM React le
+// schede si aprono con onClick, quindi non esiste nessun href.
+const READ_LABEL = "Read the full article";
+
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -130,6 +135,7 @@ function renderArticle(post, idToSlug) {
     `      <time datetime="${escapeHtml(post.data)}">${escapeHtml(formatDate(post.data))}</time>`,
     `      <p><em>${escapeHtml(post.sommario)}</em></p>`,
     blocks,
+    `      <p><a href="${SITE_URL}/post/${idToSlug.get(post.id)}.html">${escapeHtml(READ_LABEL)}</a></p>`,
     `    </article>`,
   ].join("\n");
 }
