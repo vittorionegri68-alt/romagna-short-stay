@@ -573,11 +573,13 @@ function BlogSection() {
             alignItems: "stretch" }}>
             {published.map((p, i) => (
               <Reveal key={p.id} delay={i * 80} stretch>
-                <div onClick={() => setSelected(p)}
+                <a href={`https://www.romagna-short-stay.com/post/${slugify(p.id)}.html`}
+                  onClick={e => { e.preventDefault(); setSelected(p); }}
                   style={{ background: C.cardBg, padding: "2rem",
                     cursor: "pointer", transition: "all 0.3s ease",
                     boxShadow: C.shadow, borderTop: `2px solid ${C.gold}`,
-                    height: "100%", display: "flex", flexDirection: "column" }}
+                    height: "100%", display: "flex", flexDirection: "column",
+                    textDecoration: "none", color: "inherit" }}
                   onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
                   onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}>
                   <span style={{ fontSize: "0.6rem", letterSpacing: "0.2em",
@@ -596,7 +598,7 @@ function BlogSection() {
                   <span style={{ fontSize: "0.72rem", color: C.gold, fontWeight: 700,
                     fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.08em",
                     textTransform: "uppercase" }}>Read more →</span>
-                </div>
+                </a>
               </Reveal>
             ))}
           </div>
