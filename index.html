@@ -305,11 +305,39 @@
   }
   </script>
 
+      <!-- Stile minimo del blocco pre-render in div#root. Resta visibile solo
+         fino al mount di React. Nessun contenuto nascosto. -->
+    <style>
+      #prerender{max-width:46rem;margin:0 auto;padding:1.5rem 1.25rem;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;color:#2b2b2b}
+      #prerender h2{margin:1.75rem 0 .5rem;font-size:1.25rem}
+      #prerender h3{margin:1.25rem 0 .25rem;font-size:1.05rem}
+      #prerender table{border-collapse:collapse;margin:1rem 0}
+      #prerender th,#prerender td{border:1px solid #ddd;padding:.3rem .7rem;text-align:left}
+      #prerender ul{padding-left:1.2rem}
+      #prerender li{margin:.3rem 0}
+      #prerender time{display:block;color:#666;font-size:.9rem}
+      #prerender #lingue{font-size:.9rem;margin-bottom:1rem}
+      #prerender #lingue a{margin-right:1rem}
+      /* Con JavaScript attivo il blocco resta fuori schermo: l'utente non vede
+         nessun lampo di contenuto non stilizzato prima del mount di React.
+         Il markup resta nel documento, quindi i crawler che non eseguono
+         JavaScript lo leggono normalmente, link compresi. */
+      #prerender{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);border:0}
+    </style>
+    <!-- Senza JavaScript React non monta mai: il blocco torna visibile e
+         diventa la pagina, cosi' il contenuto non e' nascosto a nessuno. -->
+    <noscript>
+      <style>
+        #prerender{position:static;width:auto;height:auto;max-width:46rem;margin:0 auto;padding:1.5rem 1.25rem;overflow:visible;clip:auto;border:0}
+      </style>
+    </noscript>
+
 </head>
 <body>
 
   <!-- Static initial content for crawlers that do not run JavaScript (GPTBot, PerplexityBot, Googlebot, Bingbot). React overwrites this block on mount: no visible change for visitors with JavaScript. -->
   <div id="root">
+    <div id="prerender">
     <main>
       <article>
         <h1>Romagna Short Stay: Short-term rental directory in Emilia-Romagna, Italy</h1>
@@ -733,6 +761,7 @@
     </article>
 <!-- BLOG-STATIC-END -->
     </main>
+    </div>
   </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
